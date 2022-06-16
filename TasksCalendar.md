@@ -11,14 +11,14 @@
     4. [Selection](#Selection)
     5. [Mutation](#Mutation)
     6. [Crossover](#Crossover)
-    7. [Callbacks](#Callbacks)
-      1. [Early Stopping](#Early Stopping)
-      2. [Checkpoint](#Checkpoint) 
-3. [Visualization](#Visualization)
-4. 
+    7. [Callbacks](#Callbacks)  
+    8. [Plots and Visualization](#Plots\ and\ Visualization)
+4. [Hiper-Parameters Selection](#Hiper-Parameters\ Selection)
+5. [Results](#Results)
+6. [Conclusions](#Conclusions)
+7. [Future Ideas](#Future\ Ideas)
+8. [Usage Guide](#Usage\ Guide)
 
-X Usage instructions
- 
 ## Introduction
 
 (How did I came up with the idea)
@@ -45,11 +45,21 @@ X Usage instructions
 
 #### Callbacks
 
-### Visualization
+    - Early stopping
+    - Checkpointing
+
+#### Plots and Visualization
 
 Calendar React API (Fullcalendar) - Link
 
-### Plots 
-
 Matplot Lib - Link
 
+### Hiper-Parameters Selection 
+
+### Results
+
+### Conclusions
+
+### Future Ideas
+
+### Usage Guide
