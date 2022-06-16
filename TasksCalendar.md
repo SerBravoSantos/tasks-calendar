@@ -8,125 +8,50 @@
 
 X Usage instructions
  
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
-#lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
+# lore
  
 ## Introduction
