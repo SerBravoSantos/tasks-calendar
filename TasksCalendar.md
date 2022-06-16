@@ -12,7 +12,7 @@
     5. [Mutation](#Mutation)
     6. [Crossover](#Crossover)
     7. [Callbacks](#Callbacks)  
-    8. [Plots%20and%20Visualization](#Plots%20and%20Visualization)
+    8. [Plots and Visualization](####Plots%20and%20Visualization)
 4. [Hiper-Parameters Selection](#Hiper-Parameters\ Selection)
 5. [Results](#Results)
 6. [Conclusions](#Conclusions)
