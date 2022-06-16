@@ -3,7 +3,7 @@
 
 
 ## Index
-1. [Introduction](##Introduction)
+1. [Introduction](#Introduction)
 2.
 
 X Usage instructions
