@@ -12,8 +12,8 @@
     5. [Mutation](#Mutation)
     6. [Crossover](#Crossover)
     7. [Callbacks](#Callbacks)
-        1. [Early Stopping](#Early Stopping)
-        2. [Checkpoint](#Checkpoint) 
+      1. [Early Stopping](#Early Stopping)
+      2. [Checkpoint](#Checkpoint) 
 3. [Visualization](#Visualization)
 4. 
 
