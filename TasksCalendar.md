@@ -5,8 +5,8 @@
 ## Index
 1. [Introduction](#Introduction)
 2. [Development](#Development)
- 1. [Calendar](#Calendar)
- 2. [Gene](#Gene)
+    1. [Calendar](#Calendar)
+    2. [Gene](#Gene)
 
 X Usage instructions
  
