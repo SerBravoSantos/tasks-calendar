@@ -48,7 +48,7 @@
     - Early stopping
     - Checkpointing
 
-#### Plots and Visualization
+#### Plots%20and%20Visualization
 
 Calendar React API (Fullcalendar) - Link
 
