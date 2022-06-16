@@ -1,4 +1,24 @@
-## Welcome to GitHub Pages
+# SERGIO BRAVO SANTOS
+## Artificial Intelligence Graduate
+
+Introduction About me
+
+Purposes about my carreer
+
+Blog
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 You can use the [editor on GitHub](https://github.com/SerBravoSantos/Sergio-Bravo-Santos/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
