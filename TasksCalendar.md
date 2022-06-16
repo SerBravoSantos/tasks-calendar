@@ -11,6 +11,9 @@
     4. [Selection](#Selection)
     5. [Mutation](#Mutation)
     6. [Crossover](#Crossover)
+    7. [Callbacks](#Callbacks)
+        1. [Early Stopping](#Early Stopping)
+        2. [Checkpoint](#Checkpoint) 
 3. [Visualization](#Visualization)
 4. 
 
@@ -29,17 +32,24 @@ X Usage instructions
  (Calendar library (Link to the library page))
 
 ### Gene
- (Gene) - why, Possible variations, Strengths and weakness
-()
+    (Gene) - why, Possible variations, Strengths and weakness
+    (Calendar Functions)
 
-### Evaluation
+#### Evaluation
 
-### Selection
+#### Selection
 
-### Mutation
+#### Mutation
 
-### Crossover
+#### Crossover
+
+#### Callbacks
 
 ### Visualization
 
+Calendar React API (Fullcalendar) - Link
+
+### Plots 
+
+Matplot Lib - Link
 
