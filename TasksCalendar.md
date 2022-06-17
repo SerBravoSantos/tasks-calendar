@@ -53,10 +53,14 @@ This variant is inspired by evolution, the way we obtain all the successors for 
 
 The genetic algorithm has 4 phases in its training process:
 
-1. **Evaluation:** Each of the chromosomes of the total population are evaluated following a criteria previously accepted. This evaluation will tell the algorithm how good is the individual. The criteria chosen will be the fitness function, and the fitness score will determine the quality of the chromosome.
-2. **Selection:** After evaluation, the GA chooses the next generation which will be transformed later on using the crossover and mutation functions. There exists different techniques to select the new population. 
-3. **Crossover:** The crossover function combines two chromosomes to obtain two different childs.
-4. **Mutation:** The mutation function modifies the gene the chromosomes chosen by probability. This modification adds a random factor that sometimes can improve the fitness score of the individual. 
+1. **Evaluation** 
+    Each of the chromosomes of the total population are evaluated following a criteria previously accepted. This evaluation will tell the algorithm how good is the individual. The criteria chosen will be the fitness function, and the fitness score will determine the quality of the chromosome.
+2. **Selection** 
+    After evaluation, the GA chooses the next generation which will be transformed later on using the crossover and mutation functions. There exists different techniques to select the new population. 
+3. **Crossover** 
+    The crossover function combines two chromosomes to obtain two different childs.
+4. **Mutation** 
+    The mutation function modifies the gene the chromosomes chosen by probability. This modification adds a random factor that sometimes can improve the fitness score of the individual. 
 
 (How did I came up with the idea)
 (Problem Definition)
