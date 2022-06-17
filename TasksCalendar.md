@@ -66,8 +66,11 @@ The genetic algorithm has 4 phases in its training process:
 ## Development
 
 ### Calendar
- (Calendar library (Link to the library page))
-
+(Calendar library (Link to the library page)
+The Python [Calendar Library](https://docs.python.org/3/library/calendar.html) has functions for getting the calendar we are going to use for the chromosome structure. In this case, we are retrieving the calendar by month of the year selected. 
+```
+calendar = calendar.monthcalendar(YEAR, MONTH)
+```
 ### Gene
 The gene for our algorithm will be an array of elements, each possition will correspond to a task and the day of the month, previously initialized. Each of the possition will have a person assigned to do this task. 
 
@@ -83,7 +86,7 @@ calendar = [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14]]
 Gene = [1, 2, 3, 4] # Where each of the people have an integer value assigned
 ```
 
-In this small sample we will have for each monday in the calendar array, one possition that corresponds to the task CTB, and the other two elements of the gene will correspond to othe thursday task CK. In chronological order
+In this small sample we will have for each monday in the calendar array, one possition that corresponds to the task CTB, and the other two elements of the gene will correspond to othe thursday task CK. 
    
    
    
