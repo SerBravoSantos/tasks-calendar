@@ -55,7 +55,7 @@ This variant is inspired by evolution, the way we obtain all the successors for 
 This states are called genes, which in our case will be an array of elements, each possition will correspond to a task and the day of the month, previously initialized. Each of the possition will have a person assigned to do this task. 
 
 #### Example of Gene
-...
+```
 CTB = Check the bins
 CK = Clean the kitchen 
 
@@ -67,7 +67,7 @@ calendar = [[1, 2, 3, 4, 5, 6, 7], [8, 9, 10, 11, 12, 13, 14]]
 Gene = [X, X, X, X]
 This X will be assigned to one of the people in the array
 Gene = [1, 2, 3, 4] # Where each of the people have an integer value assigned
-...
+```
 
 
 
