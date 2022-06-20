@@ -98,10 +98,10 @@ It is a nice structure since the gene will contain just the neccessary informati
 
 All of the functions needed for obtaining the day, week and task from the position of the gene are all gathered in the library calendarFunctions.   
    
-#### Evaluation
+### Evaluation
 This is probably the most problematic function to program in a GA. First, the evaluation will depends on the definition of the project, so you have to provide a function that provides you a fitness score correct. Second, the fitness score evaluated shows how better is one individual versus another, so the algorithm needs to be optimized and tuned as best as possible so the model trains correctly. If the criteria chosen for the fitness score changes, we need to addapt the evaluation method. 
 
-##### Criteria
+#### Criteria
 To evaluate the chromosome I had to collect all the aspects and restrictions I considered that would be neccessary for the task calendar to be optimum.
 - People can have holidays in which they will not be able to complete a task.
 - The tasks will be equally distributed in between all participants. 
@@ -120,18 +120,18 @@ To evaluate the chromosome I had to collect all the aspects and restrictions I c
 
 (Mutation Methods) (Include all 3 or maybe avoid the ones that do not work)
 
-#### Crossover
+### Crossover
 
 (Uniform CrossOver)
 
 (Kpoints CrossOver)
 
-#### Callbacks
+### Callbacks
 
 - Early stopping
 - Checkpointing
 
-#### Plots and Visualization
+### Plots and Visualization
 
 Calendar React API (Fullcalendar) - Link
 
@@ -170,4 +170,4 @@ Talk about the aspects you want to reforce, the ideas, the keypoints of the algo
 
 ### Usage Guide
 
-#### Reproducing solution
+### Reproducing solution
