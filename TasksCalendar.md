@@ -110,8 +110,8 @@ This is probably the hardest function to program in a GA.
 
 #### Callbacks
 
-    - Early stopping
-    - Checkpointing
+- Early stopping
+- Checkpointing
 
 #### Plots and Visualization
 
