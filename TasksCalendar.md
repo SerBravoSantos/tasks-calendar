@@ -108,6 +108,9 @@ To evaluate the chromosome I had to collect all the aspects and restrictions I c
 - A person will not have more than one task in a day as long as it is possible.
 - The type of tasks of each participant will be as diverse as possible.
 - The time in between the tasks of the participants will be as equally distributed as possible. 
+Based on this premises, I created 5 different fitness scores for each of them, and combined them in the following equation.
+
+$$ Fitness Score = f1 + f2 + f3 + f4 + f5 $$
 (Criteria)
 (Solution)
 (Talk about the normalization problem)
