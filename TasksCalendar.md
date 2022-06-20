@@ -111,7 +111,7 @@ To evaluate the chromosome I had to collect all the aspects and restrictions I c
 
 Based on this premises, I created 5 different fitness scores for each of them, and combined them in the following equation.
 
-$$ Fitness Score = fit1*\alpha_1 + fit2 \alpha_2 + fit3 \alpha_3 + fit4 \alpha_4 + fit5 \alpha_5 $$
+$$ Fitness Score = fit1*\alpha_1 + fit2*\alpha_2 + fit3*\alpha_3 + fit4*\alpha_4 + fit5*\alpha_5 $$
 
 (Criteria)
 (Solution)
