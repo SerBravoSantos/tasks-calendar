@@ -49,32 +49,34 @@ Having this information, I decided to implement a genetic algorithm for differen
 ## Genetic Algorithm
 
 The genetic algorithm (GA) is an heuristic search, we could consider it as an stochastic variant of the local beam search, which uses multiple states that search for the goal simultaneously. 
-This variant is inspired by evolution, the way we obtain all the successors for the next generation is by crossing their parent states. To clarify, in GAs this multiple states will be referred as chromosomes or individuals, which will have a gene or information assigned. 
+This variant is inspired in Charles Darwin's natural evolution theory, the way we obtain all the successors for the next generation is by crossing their parent states. To clarify, in GAs this multiple states will be referred as chromosomes or individuals, which will have a gene assigned. 
 
 The genetic algorithm has 4 phases in its training process:
 
-1. **Evaluation** 
+1. **Evaluation:** 
     Each of the chromosomes of the total population are evaluated following a criteria previously accepted. This evaluation will tell the algorithm how good is the individual. The criteria chosen will be the fitness function, and the fitness score will determine the quality of the chromosome.
-2. **Selection** 
+2. **Selection:** 
     After evaluation, the GA chooses the next generation which will be transformed later on using the crossover and mutation functions. There exists different techniques to select the new population. 
-3. **Crossover** 
+3. **Crossover:** 
     The crossover function combines two chromosomes to obtain two different childs.
-4. **Mutation** 
+4. **Mutation:** 
     The mutation function modifies the gene the chromosomes chosen by probability. This modification adds a random factor that sometimes can improve the fitness score of the individual. 
 
-(How did I came up with the idea)
-(Problem Definition)
-(Algorithm chosen)
-(GA explanation)
+This training process will be repeated several times until we decide. If there is an specific goal, the algorithm can stop once it has reached the goal, in this case there is not an specific goal, so we can set a number of iterations or use other techniques like the early stoping which will stop the training if there is not an improvement in N iterations. 
 
 ## Development
 
+In this section, we will see how we addapted the algorithm for this specific problem and discuss the problems that have ocurred in the development process. 
+
 ### Calendar
 (Calendar library (Link to the library page)
-The Python [Calendar Library](https://docs.python.org/3/library/calendar.html) has functions for getting the calendar we are going to use for the chromosome structure. In this case, we are retrieving the calendar by month of the year selected. 
+The Python [Calendar Library](https://docs.python.org/3/library/calendar.html) used in this project has functions for getting the calendar that we are going to use for the chromosome structure. In the following example, we are retrieving the calendar by month of the year selected. 
 ```
+YEAR = 2022
+MONTH = 7 (July)
 calendar = calendar.monthcalendar(YEAR, MONTH)
 ```
+
 ### Gene
 The gene for our algorithm will be an array of elements, each possition will correspond to a task and the day of the month, previously initialized. Each of the possition will have a person assigned to do this task. 
 
@@ -92,12 +94,13 @@ Gene = [1, 2, 3, 4] # Where each of the people have an integer value assigned
 
 In this small sample we will have for each monday in the calendar array, one possition that corresponds to the task CTB, and the other two elements of the gene will correspond to othe thursday task CK. 
    
-   
-   
-   (Gene) - why, Possible variations, Strengths and weakness
-    (Calendar Functions)
+It is a nice structure since the gene will contain just the neccessary information which are the tasks and the people assigned to it. Since each of the index referes to a certain task that correspond to a certain date in the time, we can easily convert a calendar of task into a gene, and viceversa. 
 
+All of the functions needed for obtaining the day, week and task from the position of the gene are all gathered in the library calendarFunctions.   
+   
 #### Evaluation
+This is probably the hardest function to program in a GA. 
+
 
 #### Selection
 
