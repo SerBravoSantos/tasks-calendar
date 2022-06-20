@@ -4,20 +4,20 @@
 
 ## Index
 1. **[Introduction](#Introduction)**
-2. [Development](#Development)
-    1. [Calendar](#Calendar)
-    2. [Gene](#Gene)
-    3. [Evaluation](#Evaluation)
-    4. [Selection](#Selection)
-    5. [Mutation](#Mutation)
-    6. [Crossover](#Crossover)
-    7. [Callbacks](#Callbacks)  
-    8. [Plots and Visualization](#Plots-and-Visualization)
-4. [Hiper-Parameters Selection](#Hiper-Parameters-Selection)
-5. [Results](#Results)
-6. [Conclusions](#Conclusions)
-7. [Future Ideas](#Future-Ideas)
-8. [Usage Guide](#Usage-Guide)
+2. **[Development](#Development)**
+    1. **[Calendar](#Calendar)**
+    2. **[Gene](#Gene)**
+    3. **[Evaluation](#Evaluation)**
+    4. **[Selection](#Selection)**
+    5. **[Mutation](#Mutation)**
+    6. **[Crossover](#Crossover)**
+    7. **[Callbacks](#Callbacks)**
+    8. **[Plots and Visualization](#Plots-and-Visualization)**
+4. **[Hiper-Parameters Selection](#Hiper-Parameters-Selection)**
+5. **[Results](#Results)**
+6. **[Conclusions](#Conclusions)**
+7. **[Future Ideas](#Future-Ideas)**
+8. **[Usage Guide](#Usage-Guide)**
 
 ## Introduction
 
