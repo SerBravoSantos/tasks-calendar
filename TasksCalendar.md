@@ -29,7 +29,7 @@ In specific, in this page we will talk about the really hard aspect of living wi
 
 Since I came to this house, about 8 months ago, the method used for the cleanse of the common spaces have been a handmade task calendar that contained a fixed structure of different tasks spreaded over the month, and the different housemates assigned for each of the task. This is a great idea, but I was lazy to create my calendar, and this is the reason why I started developing this project!
 
-## But First Think it
+## Model Selection 
 
 Before starting developing the whole idea, there were some issues to take care of first. 
 
@@ -99,14 +99,32 @@ It is a nice structure since the gene will contain just the neccessary informati
 All of the functions needed for obtaining the day, week and task from the position of the gene are all gathered in the library calendarFunctions.   
    
 #### Evaluation
-This is probably the hardest function to program in a GA. 
+This is probably the most problematic function to program in a GA. First, the evaluation will depends on the definition of the project, so you have to provide a function that provides you a fitness score correct. Second, the fitness score evaluated shows how better is one individual versus another, so the algorithm needs to be optimized and tuned as best as possible so the model trains correctly. If the criteria chosen for the fitness score changes, we need to addapt the evaluation method. 
 
+##### Criteria
+To evaluate the chromosome I had to collect all the aspects and restrictions I considered that would be neccessary for the task calendar to be optimum.
+- People can have holidays in which they will not be able to complete a task.
+- The tasks will be equally distributed in between all participants. 
+- A person will not have more than one task in a day as long as it is possible.
+- The type of tasks of each participant will be as diverse as possible.
+- The time in between the tasks of the participants will be as equally distributed as possible. 
+(Criteria)
+(Solution)
+(Talk about the normalization problem)
 
 #### Selection
 
+(Roulette Method)
+
 #### Mutation
 
+(Mutation Methods) (Include all 3 or maybe avoid the ones that do not work)
+
 #### Crossover
+
+(Uniform CrossOver)
+
+(Kpoints CrossOver)
 
 #### Callbacks
 
@@ -119,12 +137,37 @@ Calendar React API (Fullcalendar) - Link
 
 Matplot Lib - Link
 
-### Hiper-Parameters Selection 
+### Experimentation
+
+Comparison between (Uniform Crossover and Kpoints)
+
+Comparison Between Mutation Methods
+
+Hiper-Parameters Selection (Mutation Rates, Crossover Rates)
+
+Population 
 
 ### Results
 
+With the final configuration, We run the project and we will discuss:
+
+- Fitness Score
+- Execution Time
+- 
+
 ### Conclusions
+
+Talk about the aspects you want to reforce, the ideas, the keypoints of the algorithm, the weak and strong points
 
 ### Future Ideas
 
+- Possible Different criterias depending on what someone wants (Adding a description of the weighted tasks). 
+- Adjustable parameters for the criteria
+- Diversity of calendars (not only one month but one week, two months, one year)...
+- Selection of different models (Maybe talk about deep Unsupervised Learning methods like critic actor - Only if you can make an idea of how would it be made)
+
+### Project structure
+
 ### Usage Guide
+
+#### Reproducing solution
