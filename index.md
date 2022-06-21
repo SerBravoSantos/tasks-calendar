@@ -7,11 +7,21 @@ Purposes about my carreer
 
 Blog
 
+Projects 
+## Task Calendar
+Resume the important aspects 
+[Tasks Calendar](https://github.com/SerBravoSantos/Sergio-Bravo-Santos/edit/gh-pages/TasksCalendar.md)
 
 
+## CHARM
+[CHARM github](https://charmtool.github.io/Charm/)
+[CHARM article](https://miso.es/pubs/QUATIC.pdf)
 
 
-
+### **Contact information**
+Email: ser.bravo.santos@gmail.com
+Phone: +353 858159005
+LinkedIn: https://www.linkedin.com/in/sergio-bravo-santos/
 
 
 
