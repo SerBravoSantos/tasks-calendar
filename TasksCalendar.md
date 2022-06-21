@@ -3,8 +3,10 @@
 
 
 ## Index
-1. **[Introduction](#Introduction)**
-2. **[Development](#Development)**
+1. **[Project Structure](#Project-Structure)**
+2. **[Usage Guide](#Usage-Guide)**
+3. **[Introduction](#Introduction)**
+4. **[Development](#Development)**
     1. **[Calendar](#Calendar)**
     2. **[Gene](#Gene)**
     3. **[Evaluation](#Evaluation)**
@@ -12,12 +14,30 @@
     5. **[Mutation](#Mutation)**
     6. **[Crossover](#Crossover)**
     7. **[Callbacks](#Callbacks)**
-    8. **[Plots and Visualization](#Plots-and-Visualization)**
-4. **[Hiper-Parameters Selection](#Hiper-Parameters-Selection)**
-5. **[Results](#Results)**
-6. **[Conclusions](#Conclusions)**
-7. **[Future Ideas](#Future-Ideas)**
-8. **[Usage Guide](#Usage-Guide)**
+5. **[Plots and Visualization](#Plots-and-Visualization)**
+6. **[Results](#Results)**
+7. **[Reproducing solution](#Reproducing-solution)**
+8. **[Conclusions](#Conclusions)**
+9. **[Future Ideas](#Future-Ideas)**
+10. **[Usage Guide](#Usage-Guide)**
+
+## Project structure
+
+The project has the following structure:
+- **code/**: This folder contains the files for the model, calendar functions, plots, config and the main file.
+- **data/**: This folder contains: 
+    - **graphs/**: graphs for the fitness scores of the configuration we want
+    - **save/**: Best Chomosome saved genes obtained in the last training.
+    - **savedCalendars/**: Calendar screenshots. 
+    - **textFiles/**: Best individual fitness scores and execution time for the configuratio wantedn.
+    - **calendar.txt**: Best calendar obtained in the last training.
+
+codes/: .py main scripts with data, model, training and inference modules
+notebooks/: .ipynb Colab-friendly notebooks with model training and ensembling
+input/: input data, including raw texts, backtranslated texts and meta-features
+output/: model configurations, weights and figures exported from the notebooks
+
+## Usage Guide
 
 ## Introduction
 
@@ -122,7 +142,7 @@ The fact that there exists this many rules, and the variables for the main struc
 
 On the other hand, we need to make sure that each of the sub-scores comprehend the same range of values. Otherwise, the model will give a huge importance to some sub-scores that have big values, and will avoid those rules with a smaller value, and this could end up falling into a local maximum. This range will be bounded from -1 to 1 for all of the rules. 
 
-#### Selection 
+### Selection 
 
 For the selection I used the Roulette Selection. The idea of this method is summing up all the scores of the individuals, choose a random number in this range, and select the first individual in an ordered by maximum list that overpass this value in the cumulative distribution. 
 
@@ -137,7 +157,7 @@ I am going to try two different methods for this project.
 - Uniform Crossover: The algorithm iterates over the positions of the chromosome. In each iteration, there will be a probability of crossing a certain gene of one of  chromosomes with the gene in the same possition of the other chromosome.  
 - K-Points Crossover: Both chromosomes are divided by K parts, and this K parts are mixed alternately to form the childs. 
 
-#### Mutation
+### Mutation
 
 After crossing over the population, we are going to mutate the chromosomes. Not all the chromosomes are chosen for the mutation, but we will randomly select the part of the population that will be mutated given a probability. The mutation function will change by probability some of the genes of the chosen group.
 
@@ -147,25 +167,27 @@ There are 3 types of mutations in this project.
 - Random mutation v2: Similar to the random mutation, but if some people of the population are not included in the information of the chromosome, will be added to the pool of possible changes, if all of the participants are included in the genes, the pool will count with all of the participants.
 - Probabilistic mutation: This function gives more importance to the people that are assigned to less tasks in the individual. 
 
-This functions will be tested in the [Experimentation](#Experimentation) section.
+This functions will be tested and compared in the [Experimentation](#Experimentation) section.
 
 ### Callbacks
 
-- Early stopping
-- Checkpointing
+A callback is a function that can interfear in the process of training. There are two possible callbacks in this project. 
+- Early stopping: This function will stop the training process if in a number of iterations previously set, there is not an improvement for the best individual. 
+- Checkpointing: This function will keep track of the best individual and it will save it into a file when this new chromosome improve it's fitness score.
 
-### Plots and Visualization
+## Plots and Visualization
 
-Calendar React API (Fullcalendar) - Link
+For the experimentation I used [matplotlib](https://matplotlib.org/) library to plot the best fitness scores for each configuration over the iterations of the training. 
 
-Matplot Lib - Link
+I also used the library [fullcalendar](https://fullcalendar.io/) for visualizing the best chromosome result of the training. I created a React project with this component. To visualize the calendar I changed some properties and everytime I want to obtain the calendar I run the program on the localhost. 
 
-### Experimentation
+## Experimentation
 
 Explain the fix parameters 
 Month
 Year
 alphas
+Callbacks
 ...
 (PRIORIZATION LIST FOR ALL THE FITNESS)
 
@@ -179,7 +201,9 @@ Hiper-Parameters Selection (Mutation Rates, Crossover Rates)
 
 Population 
 
-### Results
+## Results
+
+### Reproducing solution
 
 With the final configuration, We run the project and we will discuss:
 
@@ -187,11 +211,11 @@ With the final configuration, We run the project and we will discuss:
 - Execution Time
 - Calendar image
 
-### Conclusions
+## Conclusions
 
 Talk about the aspects you want to reforce, the ideas, the keypoints of the algorithm, the weak and strong points
 
-### Future Ideas
+## Future Ideas
 
 - Possible Different criterias depending on what someone wants (Adding a description of the weighted tasks). 
 - Adjustable parameters for the criteria
@@ -199,8 +223,8 @@ Talk about the aspects you want to reforce, the ideas, the keypoints of the algo
 - Selection of different models (Maybe talk about deep Unsupervised Learning methods like critic actor - Only if you can make an idea of how would it be made)
 - Trying different Mutations, crossovers
 
-### Project structure
+## Project structure
 
-### Usage Guide
+## Usage Guide
 
-### Reproducing solution
+
