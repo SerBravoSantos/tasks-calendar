@@ -101,7 +101,6 @@ All of the functions needed for obtaining the day, week and task from the positi
 ### Evaluation
 This is probably the most problematic function to program in a GA. First, the evaluation will depends on the definition of the project, so you have to provide a function that provides you a fitness score correct. Second, the fitness score evaluated shows how better is one individual versus another, so the algorithm needs to be optimized and tuned as best as possible so the model trains correctly. If the criteria chosen for the fitness score changes, we need to addapt the evaluation method. 
 
-#### Criteria
 To evaluate the chromosome I had to collect all the aspects and restrictions I considered that would be neccessary for the task calendar to be optimum.
 - People can have holidays in which they will not be able to complete a task.
 - The tasks will be equally distributed in between all participants. 
@@ -109,9 +108,19 @@ To evaluate the chromosome I had to collect all the aspects and restrictions I c
 - The type of tasks of each participant will be as diverse as possible.
 - The time in between the tasks of the participants will be as equally distributed as possible. 
 
-Based on this premises, I created 5 different fitness scores for each of them, and combined them in the following equation.
+Based on this criteria, I created 5 different fitness scores for each of them, and combined them in the following equation.
 
-$$ Fitness Score = fit1*\alpha_1 + fit2*\alpha_2 + fit3*\alpha_3 + fit4*\alpha_4 + fit5*\alpha_5 $$
+$$ Fitness Score = fit1\alpha_1 + fit2\alpha_2 + fit3\alpha_3 + fit4\alpha_4 + fit5\alpha_5 $$
+
+Where &\alpha& is the multiplier that will adjust the formula depending on the priority we want to have for each rule.
+
+The combination of all of the scores into a final one was tedious for several reasons. 
+
+First, we want to adjust each of the multipliers for the calendar. (ga trains having this into account, if we enhanced for one individual one aspect, but enworse another more important one, it wont improve the score, if we found two chromosomes that improved, the importance we give to the rules will affect in which one gets a higher score). (Sometimes it is impossible to have everything we want, so it is important to choose how we obtain the rules).
+
+Second, all the fitness must comprehend the same range of values (normalized) since if we have big values for some fitness and small for others, the model will avoid many small improvements to satisfy other rules, and it will be more probable to fall into local maximums
+
+(PRIORIZATION LIST FOR ALL THE FITNESS).
 
 (Criteria)
 (Solution)
