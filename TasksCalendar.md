@@ -112,7 +112,7 @@ Based on this criteria, I created 5 different fitness scores for each of them, a
 
 $$ Fitness Score = fit1\alpha_1 + fit2\alpha_2 + fit3\alpha_3 + fit4\alpha_4 + fit5\alpha_5 $$
 
-Where $\alpha$ is the multiplier that will adjust the formula depending on the priority we want to have for each rule.
+$\alpha$ is the multiplier that will adjust the formula depending on the priority we want to have for each rule.
 
 The combination of all of the scores into a final one was tedious for several reasons. 
 
