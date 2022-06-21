@@ -56,7 +56,7 @@ The genetic algorithm has 4 phases in its training process:
 1. **Evaluation:** 
     Each of the chromosomes of the total population are evaluated following a criteria previously accepted. This evaluation will tell the algorithm how good is the individual. The criteria chosen will be the fitness function, and the fitness score will determine the quality of the chromosome.
 2. **Selection:** 
-    After evaluation, the GA chooses the next generation which will be transformed later on using the crossover and mutation functions. There exists different techniques to select the new population. 
+    After evaluation, the GA chooses the next generation which will be transformed later on using the crossover and mutation functions. Usually, we want to prioritize the selection of better individuals. There exists different techniques to select the new population. 
 3. **Crossover:** 
     The crossover function combines two chromosomes to obtain two different childs.
 4. **Mutation:** 
@@ -102,43 +102,52 @@ All of the functions needed for obtaining the day, week and task from the positi
 This is probably the most problematic function to program in a GA. First, the evaluation will depends on the definition of the project, so you have to provide a function that provides you a fitness score correct. Second, the fitness score evaluated shows how better is one individual versus another, so the algorithm needs to be optimized and tuned as best as possible so the model trains correctly. If the criteria chosen for the fitness score changes, we need to addapt the evaluation method. 
 
 To evaluate the chromosome I had to collect all the aspects and restrictions I considered that would be neccessary for the task calendar to be optimum.
-- People can have holidays in which they will not be able to complete a task.
-- The tasks will be equally distributed in between all participants. 
-- A person will not have more than one task in a day as long as it is possible.
-- The type of tasks of each participant will be as diverse as possible.
-- The time in between the tasks of the participants will be as equally distributed as possible. 
+1 People can have holidays in which they will not be able to complete a task.
+2 The tasks will be equally distributed in between all participants. 
+3 A person will not have more than one task in a day as long as it is possible.
+4 The type of tasks of each participant will be as diverse as possible.
+5 The time in between the tasks of the participants will be as equally distributed as possible. 
 
 Based on this criteria, I created 5 different fitness scores for each of them, and combined them in the following equation.
 
-$$ Fitness Score = fit1\alpha_1 + fit2\alpha_2 + fit3\alpha_3 + fit4\alpha_4 + fit5\alpha_5 $$
+$$ Total Fitness Score = fit1\alpha_1 + fit2\alpha_2 + fit3\alpha_3 + fit4\alpha_4 + fit5\alpha_5 $$
 
 $\alpha$ is the multiplier that will adjust the formula depending on the priority we want to have for each rule.
 
 The combination of all of the scores into a final one was tedious for several reasons. 
 
-First, we want to adjust each of the multipliers for the calendar. (ga trains having this into account, if we enhanced for one individual one aspect, but enworse another more important one, it wont improve the score, if we found two chromosomes that improved, the importance we give to the rules will affect in which one gets a higher score). (Sometimes it is impossible to have everything we want, so it is important to choose how we obtain the rules).
+On one hand, we have to decide $\alpha$ for all the fitness scores. The genetic algorithm, by probability, tends to choose the stronger individuals, and the score of this individuals depends on the value we set for each of the $\alpha$ values. This means that the genetic algorithm will reward differently, different transformations of the chromosomes that affect to different rules. 
 
-Second, all the fitness must comprehend the same range of values (normalized) since if we have big values for some fitness and small for others, the model will avoid many small improvements to satisfy other rules, and it will be more probable to fall into local maximums
+The fact that there exists this many rules, and the variables for the main structure of the chromosome can vary, implies that sometimes, we will not have a perfect solution that takes all of this rules into account. For example, if there is a person that have 3 weeks of holidays in a month that have 4 weeks, we will not have a perfect score for the rule 3 or 5. This is why it is important to choose all of the values of $\alpha$ in order to satisfy our needs. 
 
-(PRIORIZATION LIST FOR ALL THE FITNESS).
+On the other hand, we need to make sure that each of the sub-scores comprehend the same range of values. Otherwise, the model will give a huge importance to some sub-scores that have big values, and will avoid those rules with a smaller value, and this could end up falling into a local maximum. This range will be bounded from -1 to 1 for all of the rules. 
 
-(Criteria)
-(Solution)
-(Talk about the normalization problem)
+#### Selection 
 
-#### Selection
+For the selection I used the Roulette Selection. The idea of this method is summing up all the scores of the individuals, choose a random number in this range, and select the first individual in an ordered by maximum list that overpass this value in the cumulative distribution. 
 
-(Roulette Method)
-
-#### Mutation
-
-(Mutation Methods) (Include all 3 or maybe avoid the ones that do not work)
+I decided to preserve the best chromosome of each iterations in order to foment the creation of better chromosomes basing on this best individual. With this method we will not lose the advances of finding a really good chromosome, but we will not lose the stochastic factor that allows the algorithm find other good solutions. 
 
 ### Crossover
 
-(Uniform CrossOver)
+The population is grouped by pairs and crossed to obtain the new evolved population. Crossovers could be accomplished by using different methods. Furthermore, depending on the problem we are solving, some methods can be more fittable for the specific situation. 
 
-(Kpoints CrossOver)
+I am going to try two different methods for this project.
+
+- Uniform Crossover: The algorithm iterates over the positions of the chromosome. In each iteration, there will be a probability of crossing a certain gene of one of  chromosomes with the gene in the same possition of the other chromosome.  
+- K-Points Crossover: Both chromosomes are divided by K parts, and this K parts are mixed alternately to form the childs. 
+
+#### Mutation
+
+After crossing over the population, we are going to mutate the chromosomes. Not all the chromosomes are chosen for the mutation, but we will randomly select the part of the population that will be mutated given a probability. The mutation function will change by probability some of the genes of the chosen group.
+
+There are 3 types of mutations in this project.
+
+- Random mutation: The genes chosen will be randomly changed to any of the other possibilities (People).
+- Random mutation v2: Similar to the random mutation, but if some people of the population are not included in the information of the chromosome, will be added to the pool of possible changes, if all of the participants are included in the genes, the pool will count with all of the participants.
+- Probabilistic mutation: This function gives more importance to the people that are assigned to less tasks in the individual. 
+
+This functions will be tested in the [Experimentation](#Experimentation) section.
 
 ### Callbacks
 
@@ -153,6 +162,15 @@ Matplot Lib - Link
 
 ### Experimentation
 
+Explain the fix parameters 
+Month
+Year
+alphas
+...
+(PRIORIZATION LIST FOR ALL THE FITNESS)
+
+
+
 Comparison between (Uniform Crossover and Kpoints)
 
 Comparison Between Mutation Methods
@@ -165,9 +183,9 @@ Population
 
 With the final configuration, We run the project and we will discuss:
 
-- Fitness Score
+- Fitness Scores
 - Execution Time
-- 
+- Calendar image
 
 ### Conclusions
 
@@ -179,6 +197,7 @@ Talk about the aspects you want to reforce, the ideas, the keypoints of the algo
 - Adjustable parameters for the criteria
 - Diversity of calendars (not only one month but one week, two months, one year)...
 - Selection of different models (Maybe talk about deep Unsupervised Learning methods like critic actor - Only if you can make an idea of how would it be made)
+- Trying different Mutations, crossovers
 
 ### Project structure
 
