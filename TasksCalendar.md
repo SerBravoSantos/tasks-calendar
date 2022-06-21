@@ -16,10 +16,8 @@
     7. **[Callbacks](#Callbacks)**
 5. **[Plots and Visualization](#Plots-and-Visualization)**
 6. **[Results](#Results)**
-7. **[Reproducing solution](#Reproducing-solution)**
-8. **[Conclusions](#Conclusions)**
-9. **[Future Ideas](#Future-Ideas)**
-10. **[Usage Guide](#Usage-Guide)**
+7. **[Conclusions](#Conclusions)**
+8. **[Future Ideas](#Future-Ideas)**
 
 ## Project structure
 
