@@ -183,17 +183,18 @@ I also used the library [fullcalendar](https://fullcalendar.io/) for visualizing
 
  Generate
 
-| extbf{Variable}     | \textbf{Value} |
-|---------------------|----------------|
-| \textbf{Month}      | July           |
-| \textbf{Year}       | 2022           |
-| \textbf{$\alpha_1$} | 0.35           |
-| \textbf{$\alpha_2$} | 0.25           |
-| \textbf{$\alpha_3$} | 0.15           |
-| \textbf{$\alpha_4$} | 0.2            |
-| \textbf{$\alpha_5$} | 0.05           |
-| \textbf{Early Stop} | False          |
-| \textbf{Checkpoint} | True           |
+| Variable   | Value |
+|------------|-------|
+| Month      | July  |
+| Year       | 2022  |
+| $\alpha_1$ | 0.35  |
+| $\alpha_2$ | 0.25  |
+| $\alpha_3$ | 0.15  |
+| $\alpha_4$ | 0.2   |
+| $\alpha_5$ | 0.05  |
+| Early Stop | False |
+| Checkpoint | True  |
+
 
 Free Days 
 ALBERTO: 1 July - 7 July
