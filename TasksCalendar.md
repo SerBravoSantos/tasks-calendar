@@ -201,6 +201,7 @@ The random seed will only be set for the population initialization. This seed wi
 | **Name**    | **Free Days**     |
 |-------------|-------------------|
 | **Alberto** | 1 July - 7 July   |
+| **Zarra**   | 1 July - 7 July   |
 | **Hatice**  | 21 July - 26 July |
 | **Sergio**  | 11 July - 15 July |
 
@@ -248,11 +249,11 @@ Talk about the aspects you want to reforce, the ideas, the keypoints of the algo
 
 ## Future Ideas
 
-- Possible Different criterias depending on what someone wants (Adding a description of the weighted tasks). 
-- Adjustable parameters for the criteria
-- Diversity of calendars (not only one month but one week, two months, one year)...
-- Selection of different models (Maybe talk about deep Unsupervised Learning methods like critic actor - Only if you can make an idea of how would it be made)
-- Trying different Mutations, crossovers
+The project has been useful and I got the objectives I wanted to achieve. Nevertheless, there are still ways to enhance its performance and utility. 
+- Different criterias or subscores for the evaluation function, like adding weighted tasks depending on how much effort does it takes to complete a certain task. This criteria would replace number of tasks assigned per person, instead, we would add the total effort made by each person.
+- Change the calendar functions to manage different periods of time like a week, two months, a year...
+- Add more mutation functions. An example could be a mutation that permute some of the genes (This could help with the time distribution in between tasks)
+- The problem could also be fittable for other unsupervised learning models. 
 
 ## Project structure
 
