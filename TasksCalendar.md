@@ -255,8 +255,23 @@ The project has been useful and I got the objectives I wanted to achieve. Nevert
 - Add more mutation functions. An example could be a mutation that permute some of the genes (This could help with the time distribution in between tasks)
 - The problem could also be fittable for other unsupervised learning models. 
 
-## Project structure
-
 ## Usage Guide
 
+To generate a calendar you can follow the next steps:
+1. Change config.py file. 
+    1. YEAR: Year of the calendar
+    2. MONTH: Month of the calendar
+    3. PEOPLE: add the people you want to participate in the task calendar and add this people in the getter functions in calendarFunctionS.py
+    4. TASKS: create the tasks you want to set for the calendar and add this tasks in the getter functions in calendarFunctionS.py
+    5. COLOR: Assign the color for each tasks (This step works for getting the calendar with fullCalendar api)
+    6. DAYSOFF: Add the free days where the people will not be able to do tasks
+    7. Alphas: Change the alpha values to regulate each of the subfitness values. To check the sub-fitness scores read the following section [Evaluation](#Evaluation)
+    8. configs: Create the desired configuration. You will have to change the main file to modify the variable the second parameter when it the function testConfiguration is used. 
+2. In the main file you will have to modify:
+    1. peopleChosen: Choose the people you want to add in the calendar
+    2. load: if you want to load a saved best population from the last run
+    3. ntest: number of tests for each configuration you set
+    4. tests Flags: If you want to reproduce the experiments set this tests flags to true
 
+If you want to obtain the calendar using fullCalendar, you have to copy the output from textfiles/calendars/calendar_configX.txt inside the events brackets (replace the last calendar if it exists) in the file calendar/client/src/Components/Calendar.jsx
+Once done, open the command prompt in calendar/client folder, and run the command npm start (you need to have nodejs installed)
