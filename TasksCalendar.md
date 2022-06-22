@@ -209,7 +209,8 @@ The random seed will only be set for the population initialization. This seed wi
 
 This experiment will determine which crossover method seems to work better for the problem itself. 
 I only want to test the crossover effectivity, so I set the mutation probability of the chromosome to 0 so it does not affect to the results. 
-The experiment will take **25 trainings** for each of the configuration, a population of 250 chromosomes and 1000 iterations per training. 
+The experiment will take **25 trainings** for each of the configuration, a population of **250 chromosomes** and **1000 iterations** per training. 
+
 We have 4 possible configurations.
 
 | **Crossover**         | **Crossover probability** |
