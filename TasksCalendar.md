@@ -181,21 +181,22 @@ I also used the library [fullcalendar](https://fullcalendar.io/) for visualizing
 
 ## Experimentation
 
-
 #### Fixed Variables
 
-| **Variable**   | **Value** |
-|----------------|-----------|
-| **Month**      | July      |
-| **Year**       | 2022      |
-| **$\alpha_1$** | 0.35      |
-| **$\alpha_2$** | 0.25      |
-| **$\alpha_3$** | 0.15      |
-| **$\alpha_4$** | 0.2       |
-| **$\alpha_5$** | 0.05      |
-| **Early Stop** | False     |
-| **Checkpoint** | True      |
+| **Variable**    | **Value** |
+|-----------------|-----------|
+| **Month**       | July      |
+| **Year**        | 2022      |
+| **$\alpha_1$**  | 0.35      |
+| **$\alpha_2$**  | 0.25      |
+| **$\alpha_3$**  | 0.15      |
+| **$\alpha_4$**  | 0.2       |
+| **$\alpha_5$**  | 0.05      |
+| **Early Stop**  | False     |
+| **Checkpoint**  | True      |
+| **Random Seed** | 15        |
 
+The random seed will only be set for the population initialization. This seed will make sure that in all runs, we start from the same population, so the experiments made will only depend on the features we want to test.
 
 | **Name**    | **Free Days**     |
 |-------------|-------------------|
@@ -203,7 +204,23 @@ I also used the library [fullcalendar](https://fullcalendar.io/) for visualizing
 | **Hatice**  | 21 July - 26 July |
 | **Sergio**  | 11 July - 15 July |
 
-(PRIORIZATION LIST FOR ALL THE FITNESS)
+
+### Crossover Selection
+
+This experiment will determine which crossover method seems to work better for the problem itself. 
+I only want to test the crossover effectivity, so I set the mutation probability of the chromosome to 0 so it does not affect to the results. 
+The experiment will take **25 trainings** for each of the configuration, a population of 250 chromosomes and 1000 iterations per training. 
+We have 4 possible configurations.
+
+| **Crossover**         | **Crossover probability** |
+|-----------------------|---------------------------|
+| **Uniform Crossover** | 0.5                       |
+| **Uniform Crossover** | 0.75                      |
+
+| **Name**    | **K** |
+|-------------|-------|
+| **KPOINTS** | 3     |
+| **KPOINTS** | 5     |
 
 
 
