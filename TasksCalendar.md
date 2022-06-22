@@ -208,7 +208,7 @@ The random seed will only be set for the population initialization. This seed wi
 ### Crossover Selection
 
 This experiment will determine which crossover method seems to work better for the problem itself. 
-I only want to test the crossover effectivity, so I set the mutation probability of the chromosome to 0 so it does not affect to the results. 
+I only want to test the crossover effectivity, so I set the **mutation probability of the chromosome to 0** so it does not affect to the results. 
 The experiment will take **25 trainings** for each of the configuration, a population of **250 chromosomes** and **1000 iterations** per training. 
 
 We have 4 possible configurations.
@@ -222,7 +222,6 @@ We have 4 possible configurations.
 |-------------|-------|
 | **KPOINTS** | 3     |
 | **KPOINTS** | 5     |
-
 
 
 Comparison between (Uniform Crossover and Kpoints)
