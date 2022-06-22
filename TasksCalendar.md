@@ -181,26 +181,28 @@ I also used the library [fullcalendar](https://fullcalendar.io/) for visualizing
 
 ## Experimentation
 
- Generate
 
-| Variable   | Value |
-|------------|-------|
-| Month      | July  |
-| Year       | 2022  |
-| $\alpha_1$ | 0.35  |
-| $\alpha_2$ | 0.25  |
-| $\alpha_3$ | 0.15  |
-| $\alpha_4$ | 0.2   |
-| $\alpha_5$ | 0.05  |
-| Early Stop | False |
-| Checkpoint | True  |
+#### Fixed Variables
+
+| **Variable**   | **Value** |
+|----------------|-----------|
+| **Month**      | July      |
+| **Year**       | 2022      |
+| **$\alpha_1$** | 0.35      |
+| **$\alpha_2$** | 0.25      |
+| **$\alpha_3$** | 0.15      |
+| **$\alpha_4$** | 0.2       |
+| **$\alpha_5$** | 0.05      |
+| **Early Stop** | False     |
+| **Checkpoint** | True      |
 
 
-Free Days 
-ALBERTO: 1 July - 7 July
-HATICE: 21 July - 26 July 
-SERGIO: 11 July - 15 July
-...
+| **Name**    | **Free Days**     |
+|-------------|-------------------|
+| **Alberto** | 1 July - 7 July   |
+| **Hatice**  | 21 July - 26 July |
+| **Sergio**  | 11 July - 15 July |
+
 (PRIORIZATION LIST FOR ALL THE FITNESS)
 
 
