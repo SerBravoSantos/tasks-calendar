@@ -183,22 +183,20 @@ I also used the library [fullcalendar](https://fullcalendar.io/) for visualizing
 
  Generate
 
-
 \begin{table}[]
 \centering
-\begin{tabular}{|
->{\columncolor[HTML]{DAE8FC}}l |l|}
+\begin{tabular}{|l|l|}
 \hline
-\cellcolor[HTML]{CBCEFB}\textbf{Variable} & \cellcolor[HTML]{CBCEFB}\textbf{Value} \\ \hline
-\textbf{Month}                            & July                                   \\ \hline
-\textbf{Year}                             & 2022                                   \\ \hline
-\textbf{$\alpha_1$}                       & 0.35                                   \\ \hline
-\textbf{$\alpha_2$}                       & 0.25                                   \\ \hline
-\textbf{$\alpha_3$}                       & 0.15                                   \\ \hline
-\textbf{$\alpha_4$}                       & 0.2                                    \\ \hline
-\textbf{$\alpha_5$}                       & 0.05                                   \\ \hline
-\textbf{Early Stop}                       & False                                  \\ \hline
-\textbf{Checkpoint}                       & True                                   \\ \hline
+\textbf{Variable}   & \textbf{Value} \\ \hline
+\textbf{Month}      & July           \\ \hline
+\textbf{Year}       & 2022           \\ \hline
+\textbf{$\alpha_1$} & 0.35           \\ \hline
+\textbf{$\alpha_2$} & 0.25           \\ \hline
+\textbf{$\alpha_3$} & 0.15           \\ \hline
+\textbf{$\alpha_4$} & 0.2            \\ \hline
+\textbf{$\alpha_5$} & 0.05           \\ \hline
+\textbf{Early Stop} & False          \\ \hline
+\textbf{Checkpoint} & True           \\ \hline
 \end{tabular}
 \caption{Fixed Parameters}
 \label{tab:my-table}
