@@ -182,10 +182,8 @@ I also used the library [fullcalendar](https://fullcalendar.io/) for visualizing
 ## Experimentation
 
  Generate
-Result (click "Generate" to refresh) Copy to clipboard
-% Please add the following required packages to your document preamble:
-% \usepackage[table,xcdraw]{xcolor}
-% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+
+
 \begin{table}[]
 \centering
 \begin{tabular}{|
