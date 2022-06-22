@@ -181,11 +181,35 @@ I also used the library [fullcalendar](https://fullcalendar.io/) for visualizing
 
 ## Experimentation
 
-Explain the fix parameters 
-Month
-Year
-alphas
-Callbacks
+ Generate
+Result (click "Generate" to refresh) Copy to clipboard
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[]
+\centering
+\begin{tabular}{|
+>{\columncolor[HTML]{DAE8FC}}l |l|}
+\hline
+\cellcolor[HTML]{CBCEFB}\textbf{Variable} & \cellcolor[HTML]{CBCEFB}\textbf{Value} \\ \hline
+\textbf{Month}                            & July                                   \\ \hline
+\textbf{Year}                             & 2022                                   \\ \hline
+\textbf{$\alpha_1$}                       & 0.35                                   \\ \hline
+\textbf{$\alpha_2$}                       & 0.25                                   \\ \hline
+\textbf{$\alpha_3$}                       & 0.15                                   \\ \hline
+\textbf{$\alpha_4$}                       & 0.2                                    \\ \hline
+\textbf{$\alpha_5$}                       & 0.05                                   \\ \hline
+\textbf{Early Stop}                       & False                                  \\ \hline
+\textbf{Checkpoint}                       & True                                   \\ \hline
+\end{tabular}
+\caption{Fixed Parameters}
+\label{tab:my-table}
+\end{table}
+
+Free Days 
+ALBERTO: 1 July - 7 July
+HATICE: 21 July - 26 July 
+SERGIO: 11 July - 15 July
 ...
 (PRIORIZATION LIST FOR ALL THE FITNESS)
 
