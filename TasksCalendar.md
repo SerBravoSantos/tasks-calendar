@@ -214,22 +214,30 @@ The experiment will take **25 trainings** for each of the configuration, a popul
 
 We have 4 possible configurations.
 
-| **Crossover**         | **Crossover probability** |
-|-----------------------|---------------------------|
-| **Uniform Crossover** | 0.5                       |
-| **Uniform Crossover** | 0.75                      |
+| **Name**              | **Crossover**         | **Parameters Value**      |
+|-----------------------|-----------------------|---------------------------|
+| Configuration 1       | **Uniform Crossover** | 0.5 (Cross Probability)   |
+| Configuration 2       | **Uniform Crossover** | 0.75 (Cross Probability)  |
+| Configuration 3       | **K-Points**          | 3 (K)                     |
+| Configuration 4       | **K-Points**          | 5 (K)                     |
 
-| **Name**    | **K** |
-|-------------|-------|
-| **KPOINTS** | 3     |
-| **KPOINTS** | 5     |
+| **Configuration** | **Execution time** | **Maximum Avg Fitness Score** |
+| **1**             | 2372.64            | 0.950                         |
+| **2**             | 2404.60            | 0.940                         |
+| **3**             | 2391.48            | 0.948                         |
+| **4**             | 2415.18            | 0.950                         |
 
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
 
-Comparison between (Uniform Crossover and Kpoints)
+### Mutation Selection
 
 Comparison Between Mutation Methods
 
+Config 5 wins (random v2)
+
 Hiper-Parameters Selection (Mutation Rates, Crossover Rates)
+
+
 
 Population 
 
