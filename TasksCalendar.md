@@ -221,29 +221,24 @@ We have 4 possible configurations.
 | Configuration 3       | **K-Points**          | 3 (K)                     |
 | Configuration 4       | **K-Points**          | 5 (K)                     |
 
-We can check in the next 
+After training the genetic algorithm with the configurations and the parameters mentioned, I obtained this plots:
 
-<table>
-  <tr>
-    <td> <img src="img1.png"  alt="1" width = 360px height = 640px ></td>
+| **config** | **plot**                                                                                                                                  |
+|------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| **1**      | ![Config 1]([https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config1_cross_test25.jpg]?raw=true) |
+| **1**      | ![Config 2]([https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config1_cross_test25.jpg]?raw=true) |
+| **1**      | ![Config 3]([https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config1_cross_test25.jpg]?raw=true) |
+| **1**      | ![Config 4]([https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config1_cross_test25.jpg]?raw=true) |
 
-    <td><img src="img2.png" alt="2" width = 360px height = 640px></td>
-   </tr> 
-   <tr>
-      <td><img src="./Scshot/cab_arrived.png" alt="3" width = 360px height = 640px></td>
-
-      <td><img src="./Scshot/trip_end.png" align="right" alt="4" width = 360px height = 640px>
-  </td>
-  </tr>
-</table>
 
 | **Configuration** | **Execution time** | **Maximum Avg Fitness Score** |
+|-------------------|--------------------|-------------------------------|
 | **1**             | 2372.64            | 0.950                         |
 | **2**             | 2404.60            | 0.940                         |
 | **3**             | 2391.48            | 0.948                         |
 | **4**             | 2415.18            | 0.950                         |
 
-![No Image]([https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config1_cross_test25.jpg]?raw=true)
+
 
 ### Mutation Selection
 
