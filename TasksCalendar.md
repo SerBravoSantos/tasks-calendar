@@ -235,8 +235,7 @@ We have 4 possible configurations.
 After training the genetic algorithm with the configurations and the parameters mentioned, I obtained this plots:
 
 <div align="center">
-    
-| **config** | **plot**                                                                                                                                  |
+Table    
 :-----------:|:------------------------------------------------------------------------------------------------------------------------------------------:
 | **1**      | <img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config1_cross_test25.jpg" width=500 align=center><figcaption>Caption goes here</figcaption> |
 | **2**      | <img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config2_cross_test25.jpg" width=500 align=center> |
