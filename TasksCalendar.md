@@ -210,7 +210,7 @@ The random seed will only be set for the population initialization. This seed wi
 
 This experiment will determine which crossover method seems to work better for the problem itself. 
 I only want to test the crossover effectivity, so I set the **mutation probability of the chromosome to 0** so it does not affect to the results. 
-The experiment will take **25 trainings** for each of the configuration, a population of **250 chromosomes** and **1000 iterations** per training. 
+The experiment will take **25 trainings** for each of the configuration, a population of **100 chromosomes** and **1500 iterations** per training. 
 
 We have 4 possible configurations.
 
@@ -221,17 +221,29 @@ We have 4 possible configurations.
 | Configuration 3       | **K-Points**          | 3 (K)                     |
 | Configuration 4       | **K-Points**          | 5 (K)                     |
 
+We can check in the next 
+
+<table>
+  <tr>
+    <td> <img src="img1.png"  alt="1" width = 360px height = 640px ></td>
+
+    <td><img src="img2.png" alt="2" width = 360px height = 640px></td>
+   </tr> 
+   <tr>
+      <td><img src="./Scshot/cab_arrived.png" alt="3" width = 360px height = 640px></td>
+
+      <td><img src="./Scshot/trip_end.png" align="right" alt="4" width = 360px height = 640px>
+  </td>
+  </tr>
+</table>
+
 | **Configuration** | **Execution time** | **Maximum Avg Fitness Score** |
-|-------------------|--------------------|-------------------------------|
 | **1**             | 2372.64            | 0.950                         |
 | **2**             | 2404.60            | 0.940                         |
 | **3**             | 2391.48            | 0.948                         |
 | **4**             | 2415.18            | 0.950                         |
 
-
-
-![graph1](https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config1_cross_test25.jpg?raw=true)
-
+![No Image]([https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config1_cross_test25.jpg]?raw=true)
 
 ### Mutation Selection
 
