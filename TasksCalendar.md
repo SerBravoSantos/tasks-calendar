@@ -232,7 +232,7 @@ We have 4 possible configurations.
 
 </div>    
     
-After training the genetic algorithm with the configurations and the parameters mentioned, I obtained this plots:
+After training the genetic algorithm with the configurations and the parameters mentioned, I obtained the following results
 
 <div align="center">
     
@@ -245,14 +245,16 @@ After training the genetic algorithm with the configurations and the parameters 
 
 </div>
 
+It is hard to 
+
 <div align="center">
 
-| **Configuration** | **Execution time** | **Maximum Avg Fitness Score** |
-|:-----------------:|:------------------:|:-----------------------------:|
-| **1**             | 1275               | 0.950                         |
-| **2**             | 1351               | 0.940                         |
-| **3**             | 1242               | 0.948                         |
-| **4**             | 1325               | 0.950                         |
+| **Configuration** | **Execution time** | **250 iterations Avg Fit** | **500 iterations Avg Fit** | **1000 iterations Avg Fit** | **1500 iterations Avg Fit** |
+|:-----------------:|:------------------:|:--------------------------:|:--------------------------:|:---------------------------:|:---------------------------:|
+| **1**             | 1275               | 0.8809                     |  0.9138                    |  0.9362                     |  0.9438                     |
+| **2**             | 1351               | 0.948                      |  0.948                     |  0.948                      |  0.948                      |
+| **3**             | 1242               | 0.95                       |  0.948                     |  0.948                      |  0.948                      |
+| **4**             | 1325               | 0.95                       |  0.948                     |  0.948                      |  0.948                      |
 
  </div>
 
