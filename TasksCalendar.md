@@ -246,7 +246,7 @@ Table
 
 
 <div align="center">
-Table
+    
 |  |  |
 :-----------:|:------------------------------------------------------------------------------------------------------------------------------------------:
 | <img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config1_cross_test25.jpg" width=500 align=center> | <img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config3_cross_test25.jpg" width=500 align=center> |
