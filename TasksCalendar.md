@@ -224,11 +224,11 @@ We have 4 possible configurations.
 After training the genetic algorithm with the configurations and the parameters mentioned, I obtained this plots:
 
 | **config** | **plot**                                                                                                                                  |
-|------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+:-----------:|:------------------------------------------------------------------------------------------------------------------------------------------:
 | **1**      | ![Config 1]([https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config1_cross_test25.jpg]?raw=true) |
-| **1**      | ![Config 2]([https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config1_cross_test25.jpg]?raw=true) |
-| **1**      | ![Config 3]([https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config1_cross_test25.jpg]?raw=true) |
-| **1**      | ![Config 4]([https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config1_cross_test25.jpg]?raw=true) |
+| **2**      | ![Config 2]([https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config2_cross_test25.jpg]?raw=true) |
+| **3**      | ![Config 3]([https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config3_cross_test25.jpg]?raw=true) |
+| **4**      | ![Config 4]([https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config4_cross_test25.jpg]?raw=true) |
 
 
 | **Configuration** | **Execution time** | **Maximum Avg Fitness Score** |
