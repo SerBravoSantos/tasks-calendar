@@ -183,6 +183,8 @@ I also used the library [fullcalendar](https://fullcalendar.io/) for visualizing
 
 #### Fixed Variables
 
+<center>
+
 | **Variable**    | **Value** |
 |:---------------:|:---------:|
 | **Month**       | July      |
@@ -196,6 +198,8 @@ I also used the library [fullcalendar](https://fullcalendar.io/) for visualizing
 | **Checkpoint**  | True      |
 | **Random Seed** | 15        |
 
+ </center>
+    
 The random seed will only be set for the population initialization. This seed will make sure that in all runs, we start from the same population, so the experiments made will only depend on the features we want to test.
 
 | **Name**    | **Free Days**     |
