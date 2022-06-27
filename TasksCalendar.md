@@ -225,7 +225,7 @@ After training the genetic algorithm with the configurations and the parameters 
 
 | **config** | **plot**                                                                                                                                  |
 :-----------:|:------------------------------------------------------------------------------------------------------------------------------------------:
-| **1**      | ![Config 1](https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config1_cross_test25.jpg?raw=true,width=100) |
+| **1**      | ![Config 1](https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config1_cross_test25.jpg?raw=true,width=75) |
 | **2**      | ![Config 2](https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config2_cross_test25.jpg?raw=true) |
 | **3**      | ![Config 3](https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config3_cross_test25.jpg?raw=true) |
 | **4**      | ![Config 4](https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config4_cross_test25.jpg?raw=true) |
