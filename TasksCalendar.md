@@ -235,17 +235,6 @@ We have 4 possible configurations.
 After training the genetic algorithm with the configurations and the parameters mentioned, I obtained this plots:
 
 <div align="center">
-Table    
-:-----------:|:------------------------------------------------------------------------------------------------------------------------------------------:
-| **1**      | <img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config1_cross_test25.jpg" width=500 align=center><figcaption>Caption goes here</figcaption> |
-| **2**      | <img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config2_cross_test25.jpg" width=500 align=center> |
-| **3**      | <img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config3_cross_test25.jpg" width=500 align=center> |
-| **4**      | <img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config4_cross_test25.jpg" width=500 align=center> |
-
-</div>
-
-
-<div align="center">
     
 |  |  |
 :-----------:|:------------------------------------------------------------------------------------------------------------------------------------------:
@@ -260,10 +249,10 @@ Table
 
 | **Configuration** | **Execution time** | **Maximum Avg Fitness Score** |
 |:-----------------:|:------------------:|:-----------------------------:|
-| **1**             | 2372.64            | 0.950                         |
-| **2**             | 2404.60            | 0.940                         |
-| **3**             | 2391.48            | 0.948                         |
-| **4**             | 2415.18            | 0.950                         |
+| **1**             | 1275               | 0.950                         |
+| **2**             | 1351               | 0.940                         |
+| **3**             | 1242               | 0.948                         |
+| **4**             | 1325               | 0.950                         |
 
  </div>
 
