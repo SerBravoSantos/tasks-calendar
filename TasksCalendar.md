@@ -184,7 +184,7 @@ I also used the library [fullcalendar](https://fullcalendar.io/) for visualizing
 #### Fixed Variables
 
 | **Variable**    | **Value** |
-|-----------------|-----------|
+|:---------------:|:---------:|
 | **Month**       | July      |
 | **Year**        | 2022      |
 | **$\alpha_1$**  | 0.35      |
@@ -199,7 +199,7 @@ I also used the library [fullcalendar](https://fullcalendar.io/) for visualizing
 The random seed will only be set for the population initialization. This seed will make sure that in all runs, we start from the same population, so the experiments made will only depend on the features we want to test.
 
 | **Name**    | **Free Days**     |
-|-------------|-------------------|
+|:-----------:|:-----------------:|
 | **Alberto** | 1 July - 7 July   |
 | **Zarra**   | 1 July - 7 July   |
 | **Hatice**  | 21 July - 26 July |
@@ -215,7 +215,7 @@ The experiment will take **25 trainings** for each of the configuration, a popul
 We have 4 possible configurations.
 
 | **Name**              | **Crossover**         | **Parameters Value**      |
-|-----------------------|-----------------------|---------------------------|
+|:---------------------:|:---------------------:|:-------------------------:|
 | Configuration 1       | **Uniform Crossover** | 0.5 (Cross Probability)   |
 | Configuration 2       | **Uniform Crossover** | 0.75 (Cross Probability)  |
 | Configuration 3       | **K-Points**          | 3 (K)                     |
@@ -235,7 +235,7 @@ After training the genetic algorithm with the configurations and the parameters 
 </center>
 
 | **Configuration** | **Execution time** | **Maximum Avg Fitness Score** |
-|-------------------|--------------------|-------------------------------|
+|:-----------------:|:------------------:|:-----------------------------:|
 | **1**             | 2372.64            | 0.950                         |
 | **2**             | 2404.60            | 0.940                         |
 | **3**             | 2391.48            | 0.948                         |
