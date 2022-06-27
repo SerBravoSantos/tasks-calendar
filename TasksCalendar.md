@@ -231,6 +231,7 @@ After training the genetic algorithm with the configurations and the parameters 
 | **4**      | ![Config 4](https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config4_cross_test25.jpg?raw=true) |
 
 ![Config 1](https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config1_cross_test25.jpg?raw=true =250x250)
+<img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config1_cross_test25.jpg" width=300 align=right>
 
 | **Configuration** | **Execution time** | **Maximum Avg Fitness Score** |
 |-------------------|--------------------|-------------------------------|
