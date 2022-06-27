@@ -222,10 +222,13 @@ We have 4 possible configurations.
 | Configuration 4       | **K-Points**          | 5 (K)                     |
 
 | **Configuration** | **Execution time** | **Maximum Avg Fitness Score** |
+|-------------------|--------------------|-------------------------------|
 | **1**             | 2372.64            | 0.950                         |
 | **2**             | 2404.60            | 0.940                         |
 | **3**             | 2391.48            | 0.948                         |
-| **4**             | 2415.18            | 0.950                         |\
+| **4**             | 2415.18            | 0.950                         |
+
+
 
 ![graph1](https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config1_cross_test25.jpg?raw=true)
 
