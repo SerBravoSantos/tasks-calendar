@@ -227,7 +227,8 @@ We have 4 possible configurations.
 | **3**             | 2391.48            | 0.948                         |
 | **4**             | 2415.18            | 0.950                         |
 
-![No Image]([https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config1_cross_test25.jpg]?raw=true)
+![alt text](https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config1_cross_test25.jpg?raw=true)
+
 
 ### Mutation Selection
 
