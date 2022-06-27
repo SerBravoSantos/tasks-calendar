@@ -202,6 +202,8 @@ I also used the library [fullcalendar](https://fullcalendar.io/) for visualizing
     
 The random seed will only be set for the population initialization. This seed will make sure that in all runs, we start from the same population, so the experiments made will only depend on the features we want to test.
 
+<div align="center">
+
 | **Name**    | **Free Days**     |
 |:-----------:|:-----------------:|
 | **Alberto** | 1 July - 7 July   |
@@ -209,6 +211,7 @@ The random seed will only be set for the population initialization. This seed wi
 | **Hatice**  | 21 July - 26 July |
 | **Sergio**  | 11 July - 15 July |
 
+</div>
 
 ### Crossover Selection
 
@@ -218,6 +221,8 @@ The experiment will take **25 trainings** for each of the configuration, a popul
 
 We have 4 possible configurations.
 
+<div align="center">
+
 | **Name**              | **Crossover**         | **Parameters Value**      |
 |:---------------------:|:---------------------:|:-------------------------:|
 | Configuration 1       | **Uniform Crossover** | 0.5 (Cross Probability)   |
@@ -225,9 +230,11 @@ We have 4 possible configurations.
 | Configuration 3       | **K-Points**          | 3 (K)                     |
 | Configuration 4       | **K-Points**          | 5 (K)                     |
 
+</div>    
+    
 After training the genetic algorithm with the configurations and the parameters mentioned, I obtained this plots:
 
-<center>
+<div align="center">
     
 | **config** | **plot**                                                                                                                                  |
 :-----------:|:------------------------------------------------------------------------------------------------------------------------------------------:
@@ -236,7 +243,10 @@ After training the genetic algorithm with the configurations and the parameters 
 | **3**      | <img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config3_cross_test25.jpg" width=500 align=center> |
 | **4**      | <img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config4_cross_test25.jpg" width=500 align=center> |
 
-</center>
+</div>
+
+
+<div align="center">
 
 | **Configuration** | **Execution time** | **Maximum Avg Fitness Score** |
 |:-----------------:|:------------------:|:-----------------------------:|
@@ -245,6 +255,7 @@ After training the genetic algorithm with the configurations and the parameters 
 | **3**             | 2391.48            | 0.948                         |
 | **4**             | 2415.18            | 0.950                         |
 
+ </div>
 
 ### Mutation Selection
 
