@@ -223,13 +223,14 @@ We have 4 possible configurations.
 
 After training the genetic algorithm with the configurations and the parameters mentioned, I obtained this plots:
 
+<center>
 | **config** | **plot**                                                                                                                                  |
 :-----------:|:------------------------------------------------------------------------------------------------------------------------------------------:
 | **1**      | <img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config1_cross_test25.jpg" width=500 align=center> |
 | **2**      | <img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config2_cross_test25.jpg" width=500 align=center> |
 | **3**      | <img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config3_cross_test25.jpg" width=500 align=center> |
 | **4**      | <img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config4_cross_test25.jpg" width=500 align=center> |
-
+</center>
 
 | **Configuration** | **Execution time** | **Maximum Avg Fitness Score** |
 |-------------------|--------------------|-------------------------------|
