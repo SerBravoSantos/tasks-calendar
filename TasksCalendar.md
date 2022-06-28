@@ -183,8 +183,10 @@ I also used the library [fullcalendar](https://fullcalendar.io/) for visualizing
 
 #### Fixed Variables
 
+<div align="center">
+
 | **Variable**    | **Value** |
-|-----------------|-----------|
+|:---------------:|:---------:|
 | **Month**       | July      |
 | **Year**        | 2022      |
 | **$\alpha_1$**  | 0.35      |
@@ -196,42 +198,70 @@ I also used the library [fullcalendar](https://fullcalendar.io/) for visualizing
 | **Checkpoint**  | True      |
 | **Random Seed** | 15        |
 
+ </div>
+    
 The random seed will only be set for the population initialization. This seed will make sure that in all runs, we start from the same population, so the experiments made will only depend on the features we want to test.
 
+<div align="center">
+
 | **Name**    | **Free Days**     |
-|-------------|-------------------|
+|:-----------:|:-----------------:|
 | **Alberto** | 1 July - 7 July   |
 | **Zarra**   | 1 July - 7 July   |
 | **Hatice**  | 21 July - 26 July |
 | **Sergio**  | 11 July - 15 July |
 
+</div>
 
 ### Crossover Selection
 
 This experiment will determine which crossover method seems to work better for the problem itself. 
 I only want to test the crossover effectivity, so I set the **mutation probability of the chromosome to 0** so it does not affect to the results. 
-The experiment will take **25 trainings** for each of the configuration, a population of **250 chromosomes** and **1000 iterations** per training. 
+The experiment will take **25 trainings** for each of the configuration, a population of **100 chromosomes** and **1500 iterations** per training. 
 
 We have 4 possible configurations.
 
+<div align="center">
+
 | **Name**              | **Crossover**         | **Parameters Value**      |
-|-----------------------|-----------------------|---------------------------|
+|:---------------------:|:---------------------:|:-------------------------:|
 | Configuration 1       | **Uniform Crossover** | 0.5 (Cross Probability)   |
 | Configuration 2       | **Uniform Crossover** | 0.75 (Cross Probability)  |
 | Configuration 3       | **K-Points**          | 3 (K)                     |
 | Configuration 4       | **K-Points**          | 5 (K)                     |
 
-| **Configuration** | **Execution time** | **Maximum Avg Fitness Score** |
-| **1**             | 2372.64            | 0.950                         |
-| **2**             | 2404.60            | 0.940                         |
-| **3**             | 2391.48            | 0.948                         |
-| **4**             | 2415.18            | 0.950                         |
+</div>    
+    
+After training the genetic algorithm with the configurations and the parameters mentioned, I obtained the following results
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+<div align="center">
+    
+|  |  |
+:-----------:|:------------------------------------------------------------------------------------------------------------------------------------------:
+| <img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config1_cross_test25.jpg" width=500 align=center> | <img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config2_cross_test25.jpg" width=500 align=center> |
+| <figcaption>Config 1</figcaption> | <figcaption>Config 2</figcaption> |
+| <img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config3_cross_test25.jpg" width=500 align=center> | <img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config4_cross_test25.jpg" width=500 align=center> |
+| <figcaption>Config 3</figcaption> | <figcaption>Config 4</figcaption> |    
+
+</div>
+
+It is hard to 
+
+<div align="center">
+
+| **Configuration** | **Execution time** | **250 iterations Avg Fit** | **500 iterations Avg Fit** | **1000 iterations Avg Fit** | **1500 iterations Avg Fit** |
+|:-----------------:|:------------------:|:--------------------------:|:--------------------------:|:---------------------------:|:---------------------------:|
+| **1**             | 39 min             | 0.8809                     |  0.9138                    |  0.9362                     |  0.9438                     |
+| **2**             | 1351               | 0.948                      |  0.948                     |  0.948                      |  0.948                      |
+| **3**             | 1242               | 0.95                       |  0.948                     |  0.948                      |  0.948                      |
+| **4**             | 1325               | 0.95                       |  0.948                     |  0.948                      |  0.948                      |
+
+ </div>
 
 ### Mutation Selection
 
 Comparison Between Mutation Methods
+
 
 Config 5 wins (random v2)
 
