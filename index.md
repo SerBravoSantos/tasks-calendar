@@ -22,7 +22,12 @@ We can find:
 - Possible features to add
 
 #### CHARM
+Charm is the result of a research in chatbot testing. The tool, that compliments BOTIUM, can help the chatbot programmer test the chatbot by augmenting the training dataset with different methods. There is also an improvement in some BOTIUM features. 
+
+To use charm you can click on the link to the repossitory:
 [CHARM github](https://charmtool.github.io/Charm/)
+
+A more detailed explanation of the project and functionallity is given in the article presented in 2020 QUATIC's conference.
 [CHARM article](https://miso.es/pubs/QUATIC.pdf)
 
 
@@ -30,46 +35,3 @@ We can find:
 Email: ser.bravo.santos@gmail.com
 Phone: +353 858159005
 LinkedIn: https://www.linkedin.com/in/sergio-bravo-santos/
-
-
-
-
-
-
-
-
-You can use the [editor on GitHub](https://github.com/SerBravoSantos/Sergio-Bravo-Santos/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/SerBravoSantos/Sergio-Bravo-Santos/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
