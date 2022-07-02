@@ -3,7 +3,7 @@
 
 I am a graduated in Artificial Intelligence with 2 years of experience in data analytics and modelling software. I have studied and worked with many different programming languages since I started my bachelor's degree in Computer Engineering, but I am especially experienced in Python and python Machine Learning libraries. 
 
-In my professional career, I have been in charge of the maintenance of a big recommendation system for a new's page, optimized a system that created services itineraries for improving the work situation of unemployed peoplea and I published an article for the 2020 QUATIC's conference presenting a chatbot's testing tool. 
+In my professional career, I have been in charge of the maintenance of a big recommendation system for a new's page, optimized a system that created services itineraries for improving the work situation of unemployed people and I published an article for the 2020 QUATIC's conference presenting a chatbot's testing tool. 
 
 I am motivated to learn the more I can about Machine Learning, Deep Learning, Data Analysis and Big Data Processing as I am also interested in other fields such as Computer Vision, Natural Language Processing, Internet of Things... 
 
