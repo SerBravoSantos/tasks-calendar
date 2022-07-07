@@ -217,7 +217,7 @@ The random seed will only be set for the population initialization. This seed wi
 
 This experiment will determine which crossover method seems to work better for the problem itself. 
 I only want to test the crossover effectivity, so I set the **mutation probability of the chromosome to 0** so it does not affect to the results. 
-The experiment will take **50 tests** for each of the configuration, a population of **100 chromosomes** and **1500 iterations** per training. 
+The experiment will take **10 tests** for each of the configuration, a population of **75 chromosomes** and **2000 iterations** per training. 
 
 We have 4 possible configurations.
 
@@ -232,7 +232,7 @@ We have 4 possible configurations.
 
 </div>    
     
-After training the genetic algorithm with the configurations and the parameters mentioned, I obtained the following results
+After training the genetic algorithm with all of the configurations, I obtained the following results:
 
 <div align="center">
     
@@ -245,9 +245,12 @@ After training the genetic algorithm with the configurations and the parameters 
 
 </div>
 
+This plots shows the fitness scores obtained on each iteration during the training process of the genetic algorithm for all the tests. The continuous and red line shows the mean of all the runs, this will give us an idea of the average performance for each configuration. 
+At first sight, we can see that 
+
 <div align="center">
 
-| **Configuration** | **Execution time** | **500 iterations Avg Fit** | **1000 iterations Avg Fit** | **1500 iterations Avg Fit** |
+| **Configuration** | **Execution time** | **250 iterations Avg Fit** | **500 iterations Avg Fit** | **2000 iterations Avg Fit** |
 |:-----------------:|:------------------:|:--------------------------:|:---------------------------:|:---------------------------:|
 | **1**             | 39 min             |  0.9138                    |  0.9362                     |  0.9438                     |
 | **2**             | 47 min             |  0.9148                    |  0.9327                     |  0.9420                     |
