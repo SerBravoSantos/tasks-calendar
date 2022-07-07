@@ -217,7 +217,7 @@ The random seed will only be set for the population initialization. This seed wi
 
 This experiment will determine which crossover method seems to work better for the problem itself. 
 I only want to test the crossover effectivity, so I set the **mutation probability of the chromosome to 0** so it does not affect to the results. 
-The experiment will take **25 trainings** for each of the configuration, a population of **100 chromosomes** and **1500 iterations** per training. 
+The experiment will take **50 tests** for each of the configuration, a population of **100 chromosomes** and **1500 iterations** per training. 
 
 We have 4 possible configurations.
 
@@ -238,30 +238,82 @@ After training the genetic algorithm with the configurations and the parameters 
     
 |  |  |
 :-----------:|:------------------------------------------------------------------------------------------------------------------------------------------:
-| <img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config1_cross_test25.jpg" width=500 align=center> | <img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config2_cross_test25.jpg" width=500 align=center> |
+| <img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config1_cross_test50.jpg" width=500 align=center> | <img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config2_cross_test50.jpg" width=500 align=center> |
 | <figcaption>Config 1</figcaption> | <figcaption>Config 2</figcaption> |
-| <img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config3_cross_test25.jpg" width=500 align=center> | <img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config4_cross_test25.jpg" width=500 align=center> |
+| <img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config3_cross_test50.jpg" width=500 align=center> | <img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScoresAvg_config4_cross_test50.jpg" width=500 align=center> |
 | <figcaption>Config 3</figcaption> | <figcaption>Config 4</figcaption> |    
 
 </div>
 
-It is hard to 
-
 <div align="center">
 
-| **Configuration** | **Execution time** | **250 iterations Avg Fit** | **500 iterations Avg Fit** | **1000 iterations Avg Fit** | **1500 iterations Avg Fit** |
-|:-----------------:|:------------------:|:--------------------------:|:--------------------------:|:---------------------------:|:---------------------------:|
-| **1**             | 39 min             | 0.8809                     |  0.9138                    |  0.9362                     |  0.9438                     |
-| **2**             | 47 min             | 0.8610                     |  0.9148                    |  0.9327                     |  0.9420                     |
-| **3**             | 53 min             | 0.8695                     |  0.9129                    |  0.9289                     |  0.9405                     |
-| **4**             | 39 min             | 0.8714                     |  0.9072                    |  0.9292                     |  0.9352                     |
+| **Configuration** | **Execution time** | **500 iterations Avg Fit** | **1000 iterations Avg Fit** | **1500 iterations Avg Fit** |
+|:-----------------:|:------------------:|:--------------------------:|:---------------------------:|:---------------------------:|
+| **1**             | 39 min             |  0.9138                    |  0.9362                     |  0.9438                     |
+| **2**             | 47 min             |  0.9148                    |  0.9327                     |  0.9420                     |
+| **3**             | 53 min             |  0.9129                    |  0.9289                     |  0.9405                     |
+| **4**             | 39 min             |  0.9072                    |  0.9292                     |  0.9352                     |
 
  </div>
 
+(EXPLAIN)
+Configuration 1 seems to be better UNIFORM COST, CROSSVALUE 0.75
+
 ### Mutation Selection
 
-Comparison Between Mutation Methods
+**10 tests**, **100 chromosomes** and **1500 iterations**
 
+
+<div align="center">
+
+| **Name**              | **Mutation**               | **Mutation Probability** | **Probability of Muting the Gene** |
+|:---------------------:|:--------------------------:|:------------------------:|:----------------------------------:|
+| Configuration 1       | **Random Mutation  **      | 0.1                      | 0.01                               |
+| Configuration 2       | **Random Mutation  **      | 0.1                      | 0.05                               |
+| Configuration 3       | **Random Mutation  **      | 0.1                      | 0.1                                |
+| Configuration 4       | **Random Mutation  **      | 0.3                      | 0.01                               |
+| Configuration 5       | **Random Mutation  **      | 0.3                      | 0.05                               |
+| Configuration 6       | **Random Mutation  **      | 0.3                      | 0.1                                |
+| Configuration 7       | **Random Mutation v2**     | 0.1                      | 0.01                               |
+| Configuration 8       | **Random Mutation v2**     | 0.1                      | 0.05                               |
+| Configuration 9       | **Random Mutation v2**     | 0.1                      | 0.1                                |
+| Configuration 10      | **Random Mutation v2**     | 0.3                      | 0.01                               |
+| Configuration 11      | **Random Mutation v2**     | 0.3                      | 0.05                               |
+| Configuration 12      | **Random Mutation v2**     | 0.3                      | 0.1                                |
+| Configuration 13      | **Probabilistic Mutation** | 0.1                      | 0.01                               |
+| Configuration 14      | **Probabilistic Mutation** | 0.1                      | 0.05                               |
+| Configuration 15      | **Probabilistic Mutation** | 0.1                      | 0.1                                |
+| Configuration 16      | **Probabilistic Mutation** | 0.3                      | 0.01                               |
+| Configuration 17      | **Probabilistic Mutation** | 0.3                      | 0.05                               |
+| Configuration 18      | **Probabilistic Mutation** | 0.3                      | 0.1                                |
+    
+
+</div>  
+
+<div align="center">
+
+| **Configuration**  | **Execution time** | **500 iterations Avg Fit** | **1000 iterations Avg Fit** | **1500 iterations Avg Fit** |
+|:------------------:|:------------------:|:--------------------------:|:---------------------------:|:---------------------------:|
+| **1**              | 12 min             |  0.9125                    |  0.9284                     |  0.9341                     |
+| **2**              | 13 min             |  0.9144                    |  0.9242                     |  0.9368                     |
+| **3**              | 11 min             |  0.8866                    |  0.9052                     |  0.9231                     |
+| **4**              | 12 min             |  0.9034                    |  0.9315                     |  0.9381                     |
+| **5**              | 12 min             |  0.8937                    |  0.9090                     |  0.9156                     |
+| **6**              | 10 min             |  0.8816                    |  0.9005                     |  0.9219                     |
+| **7**              | 8 min              |  0.9230                    |  0.9351                     |  0.9413                     |
+| **8**              | 8 min              |  0.9164                    |  0.9248                     |  0.9280                     |
+| **9**              | 8 min              |  0.9102                    |  0.9202                     |  0.9237                     |
+| **10**             | 9 min              |  0.9228                    |  0.9300                     |  0.9358                     |
+| **11**             | 9 min              |  0.9135                    |  0.9262                     |  0.9357                     |
+| **12**             | 9 min              |  0.9128                    |  0.9232                     |  0.9320                     |
+| **13**             | 9 min              |  0.9051                    |  0.9150                     |  0.9249                     |
+| **14**             | 10 min             |  0.8701                    |  0.8961                     |  0.9110                     |
+| **15**             | 11 min             |  0.8545                    |  0.8578                     |  0.8635                     |
+| **16**             | 11 min             |  0.9057                    |  0.9262                     |  0.9298                     |
+| **17**             | 13 min             |  0.8780                    |  0.8883                     |  0.8966                     |
+| **18**             | 15 min             |  0.8268                    |  0.8404                     |  0.8446                     |
+
+ </div>
 
 Config 5 wins (random v2)
 
