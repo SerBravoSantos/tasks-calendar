@@ -225,8 +225,8 @@ We have 4 possible configurations.
 
 | **Name**              | **Crossover**         | **Parameters Value**      |
 |:---------------------:|:---------------------:|:-------------------------:|
-| Configuration 1       | **Uniform Crossover** | 0.5 (Cross Probability)   |
-| Configuration 2       | **Uniform Crossover** | 0.75 (Cross Probability)  |
+| Configuration 1       | **Uniform Crossover** | 0.75 (Cross Probability)  |
+| Configuration 2       | **Uniform Crossover** | 0.9  (Cross Probability)  |
 | Configuration 3       | **K-Points**          | 3 (K)                     |
 | Configuration 4       | **K-Points**          | 5 (K)                     |
 
@@ -270,17 +270,16 @@ In the following table, We can see the values obtained for the execution time, a
 | **Configuration** | **Execution time** | **250 iterations Avg Fit** | **500 iterations Avg Fit** | **2000 iterations Avg Fit** |
 |:-----------------:|:------------------:|:--------------------------:|:---------------------------:|:---------------------------:|
 | **1**             | 9 min              |  0.8556                    |  0.8996                     |  0.9513                     |
-| **2**             | 7 min 45 seg       |  0.8887                    |  0.9126                     |  0.9472                     |
+| **2**             | 8 min 45 seg       |  0.8887                    |  0.9126                     |  0.9472                     |
 | **3**             | 9 min 14 seg       |  0.8656                    |  0.9054                     |  0.9451                     |
 | **4**             | 9 min 26 seg       |  0.8629                    |  0.9061                     |  0.9425                     |
 
- The difference in the execution time for all of the tests for each configuration is not pretty significant. Eventhough, We can see that Uniform Crossover was faster than KPOINTS in this experiments. Talking about the average scores, It seems  
+</div>
+
+The difference in the execution time for all of the tests for each configuration is not pretty significant. Eventhough, We can see that Uniform Crossover was faster than KPOINTS in this experiments. Talking about the average scores, It seems that both configurations with Uniform Crossover got better results in almost all of the cuts. Because of this two points, up to now, all the rest of experiments will be setted with *Uniform Crossover*. 
+
+Even though the second configuration converged faster the first iterations, it got worst overall results at the end of the run. This is the reason why, I will set the crossover value to *0.75*.
     
- </div>
-
-(EXPLAIN)
-Configuration 1 seems to be better UNIFORM COST, CROSSVALUE 0.75
-
 ### Mutation Selection
 
 **10 tests**, **100 chromosomes** and **1500 iterations**
@@ -292,22 +291,16 @@ Configuration 1 seems to be better UNIFORM COST, CROSSVALUE 0.75
 |:---------------------:|:--------------------------:|:------------------------:|:----------------------------------:|
 | Configuration 1       | **Random Mutation  **      | 0.1                      | 0.01                               |
 | Configuration 2       | **Random Mutation  **      | 0.1                      | 0.05                               |
-| Configuration 3       | **Random Mutation  **      | 0.1                      | 0.1                                |
-| Configuration 4       | **Random Mutation  **      | 0.3                      | 0.01                               |
-| Configuration 5       | **Random Mutation  **      | 0.3                      | 0.05                               |
-| Configuration 6       | **Random Mutation  **      | 0.3                      | 0.1                                |
-| Configuration 7       | **Random Mutation v2**     | 0.1                      | 0.01                               |
-| Configuration 8       | **Random Mutation v2**     | 0.1                      | 0.05                               |
-| Configuration 9       | **Random Mutation v2**     | 0.1                      | 0.1                                |
-| Configuration 10      | **Random Mutation v2**     | 0.3                      | 0.01                               |
-| Configuration 11      | **Random Mutation v2**     | 0.3                      | 0.05                               |
-| Configuration 12      | **Random Mutation v2**     | 0.3                      | 0.1                                |
-| Configuration 13      | **Probabilistic Mutation** | 0.1                      | 0.01                               |
-| Configuration 14      | **Probabilistic Mutation** | 0.1                      | 0.05                               |
-| Configuration 15      | **Probabilistic Mutation** | 0.1                      | 0.1                                |
-| Configuration 16      | **Probabilistic Mutation** | 0.3                      | 0.01                               |
-| Configuration 17      | **Probabilistic Mutation** | 0.3                      | 0.05                               |
-| Configuration 18      | **Probabilistic Mutation** | 0.3                      | 0.1                                |
+| Configuration 3       | **Random Mutation  **      | 0.3                      | 0.01                               |
+| Configuration 4       | **Random Mutation  **      | 0.3                      | 0.05                               |
+| Configuration 5       | **Random Mutation v2**     | 0.1                      | 0.01                               |
+| Configuration 6       | **Random Mutation v2**     | 0.1                      | 0.05                               |
+| Configuration 7       | **Random Mutation v2**     | 0.3                      | 0.01                               |
+| Configuration 8       | **Random Mutation v2**     | 0.3                      | 0.05                               |
+| Configuration 9       | **Probabilistic Mutation** | 0.1                      | 0.01                               |
+| Configuration 10      | **Probabilistic Mutation** | 0.1                      | 0.05                               |
+| Configuration 11      | **Probabilistic Mutation** | 0.3                      | 0.01                               |
+| Configuration 12      | **Probabilistic Mutation** | 0.3                      | 0.05                               |
     
 
 </div>  
@@ -318,22 +311,16 @@ Configuration 1 seems to be better UNIFORM COST, CROSSVALUE 0.75
 |:------------------:|:------------------:|:--------------------------:|:---------------------------:|:---------------------------:|
 | **1**              | 12 min             |  0.9125                    |  0.9284                     |  0.9341                     |
 | **2**              | 13 min             |  0.9144                    |  0.9242                     |  0.9368                     |
-| **3**              | 11 min             |  0.8866                    |  0.9052                     |  0.9231                     |
-| **4**              | 12 min             |  0.9034                    |  0.9315                     |  0.9381                     |
-| **5**              | 12 min             |  0.8937                    |  0.9090                     |  0.9156                     |
-| **6**              | 10 min             |  0.8816                    |  0.9005                     |  0.9219                     |
-| **7**              | 8 min              |  0.9230                    |  0.9351                     |  0.9413                     |
-| **8**              | 8 min              |  0.9164                    |  0.9248                     |  0.9280                     |
-| **9**              | 8 min              |  0.9102                    |  0.9202                     |  0.9237                     |
-| **10**             | 9 min              |  0.9228                    |  0.9300                     |  0.9358                     |
-| **11**             | 9 min              |  0.9135                    |  0.9262                     |  0.9357                     |
-| **12**             | 9 min              |  0.9128                    |  0.9232                     |  0.9320                     |
-| **13**             | 9 min              |  0.9051                    |  0.9150                     |  0.9249                     |
-| **14**             | 10 min             |  0.8701                    |  0.8961                     |  0.9110                     |
-| **15**             | 11 min             |  0.8545                    |  0.8578                     |  0.8635                     |
-| **16**             | 11 min             |  0.9057                    |  0.9262                     |  0.9298                     |
-| **17**             | 13 min             |  0.8780                    |  0.8883                     |  0.8966                     |
-| **18**             | 15 min             |  0.8268                    |  0.8404                     |  0.8446                     |
+| **3**              | 12 min             |  0.9034                    |  0.9315                     |  0.9381                     |
+| **4**              | 12 min             |  0.8937                    |  0.9090                     |  0.9156                     |
+| **5**              | 8 min              |  0.9230                    |  0.9351                     |  0.9413                     |
+| **6**              | 8 min              |  0.9164                    |  0.9248                     |  0.9280                     |
+| **7**              | 9 min              |  0.9228                    |  0.9300                     |  0.9358                     |
+| **8**              | 9 min              |  0.9135                    |  0.9262                     |  0.9357                     |
+| **9**              | 9 min              |  0.9051                    |  0.9150                     |  0.9249                     |
+| **10**             | 10 min             |  0.8701                    |  0.8961                     |  0.9110                     |
+| **11**             | 11 min             |  0.9057                    |  0.9262                     |  0.9298                     |
+| **12**             | 13 min             |  0.8780                    |  0.8883                     |  0.8966                     |
 
  </div>
 
