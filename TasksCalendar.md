@@ -269,11 +269,13 @@ In the following table, We can see the values obtained for the execution time, a
 
 | **Configuration** | **Execution time** | **250 iterations Avg Fit** | **500 iterations Avg Fit** | **2000 iterations Avg Fit** |
 |:-----------------:|:------------------:|:--------------------------:|:---------------------------:|:---------------------------:|
-| **1**             | 39 min             |  0.9138                    |  0.9362                     |  0.9438                     |
-| **2**             | 47 min             |  0.9148                    |  0.9327                     |  0.9420                     |
-| **3**             | 53 min             |  0.9129                    |  0.9289                     |  0.9405                     |
-| **4**             | 39 min             |  0.9072                    |  0.9292                     |  0.9352                     |
+| **1**             | 9 min              |  0.8556                    |  0.8996                     |  0.9513                     |
+| **2**             | 7 min 45 seg       |  0.8887                    |  0.9126                     |  0.9472                     |
+| **3**             | 9 min 14 seg       |  0.8656                    |  0.9054                     |  0.9451                     |
+| **4**             | 9 min 26 seg       |  0.8629                    |  0.9061                     |  0.9425                     |
 
+ The difference in the execution time for all of the tests for each configuration is not pretty significant. Eventhough, We can see that Uniform Crossover was faster than KPOINTS in this experiments. Talking about the average scores, It seems  
+    
  </div>
 
 (EXPLAIN)
