@@ -252,8 +252,12 @@ At first sight, we can see that the model converge easily to a good fitness, in 
     <dd>
         <dl>
             <dd>
-                <h4>Note</h4>
-                <p>Since all of the sub-scores are ranged from 0 to 1, and all the $\alpha$ values are normalized, the maximum score we can obtain is 1. Also, depending on the combination of tasks, free days, people, and days in the calendar, the maximum score possible for each calendar varies.</p>
+                <dl>
+                    <dd>
+                        <h4>Note</h4>
+                        <p>Since all of the sub-scores are ranged from 0 to 1, and all the $\alpha$ values are normalized, the maximum score we can obtain is 1. Also,                            depending on the combination of tasks, free days, people, and days in the calendar, the maximum score possible for each calendar varies.</p>
+                    </dd>
+                </dl>
             </dd>
         </dl>
     </dd>
