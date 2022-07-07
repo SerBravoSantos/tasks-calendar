@@ -307,24 +307,30 @@ Even though the second configuration converged faster the first iterations, it g
 
 <div align="center">
 
-| **Configuration**  | **Execution time** | **500 iterations Avg Fit** | **1000 iterations Avg Fit** | **1500 iterations Avg Fit** |
+| **Configuration**  | **Execution time** | **250 iterations Avg Fit** | **500 iterations Avg Fit** | **2000 iterations Avg Fit** |
 |:------------------:|:------------------:|:--------------------------:|:---------------------------:|:---------------------------:|
-| **1**              | 12 min             |  0.9125                    |  0.9284                     |  0.9341                     |
-| **2**              | 13 min             |  0.9144                    |  0.9242                     |  0.9368                     |
-| **3**              | 12 min             |  0.9034                    |  0.9315                     |  0.9381                     |
-| **4**              | 12 min             |  0.8937                    |  0.9090                     |  0.9156                     |
-| **5**              | 8 min              |  0.9230                    |  0.9351                     |  0.9413                     |
-| **6**              | 8 min              |  0.9164                    |  0.9248                     |  0.9280                     |
-| **7**              | 9 min              |  0.9228                    |  0.9300                     |  0.9358                     |
-| **8**              | 9 min              |  0.9135                    |  0.9262                     |  0.9357                     |
-| **9**              | 9 min              |  0.9051                    |  0.9150                     |  0.9249                     |
-| **10**             | 10 min             |  0.8701                    |  0.8961                     |  0.9110                     |
-| **11**             | 11 min             |  0.9057                    |  0.9262                     |  0.9298                     |
-| **12**             | 13 min             |  0.8780                    |  0.8883                     |  0.8966                     |
+| **1**              | 7 min 47 seg       |  0.8396                    |  0.8966                     |  0.9369                     |
+| **2**              | 8 min              |  0.8549                    |  0.9035                     |  0.9319                     |
+| **3**              | 8 min 27 seg       |  0.8475                    |  0.8684                     |  0.9005                     |
+| **4**              | 8 min 31 seg       |  0.8563                    |  0.8692                     |  0.9041                     |
+| **5**              | 8 min              |  0.8878                    |  0.9053                     |  0.9386                     |
+| **6**              | 8 min 9 seg        |  0.8954                    |  0.9112                     |  0.9336                     |
+| **7**              | 8 min 37 seg       |  0.8930                    |  0.9112                     |  0.9240                     |
+| **8**              | 8 min 38 seg       |  0.8628                    |  0.8846                     |  0.9362                     |
+| **9**              | 9 min 55 seg       |  0.8830                    |  0.9100                     |  0.9233                     |
+| **10**             | 10 min 35 seg      |  0.8518                    |  0.8673                     |  0.9101                     |
+| **11**             | 10 min 25 seg      |  0.8802                    |  0.8864                     |  0.9241                     |
+| **12**             | 12 min 55 seg      |  0.8593                    |  0.8736                     |  0.9049                     |
 
  </div>
 
-Config 5 wins (random v2)
+As we can see, any of the configurations could improve the performance of the genetic algorithm without mutation. This could means several things:
+- Population is not big enough to have diversity in the mutations. 
+- The genetic algorithm could converge slower. 
+- The mutations chosen are not effective for this problem.
+
+To check if any of the first two assumptions is correct, I am going to run another experiment comparing the base configuration with, and without mutation probability
+
 
 Hiper-Parameters Selection (Mutation Rates, Crossover Rates)
 
