@@ -247,10 +247,10 @@ After training the genetic algorithm with all of the configurations, I obtained 
 
 This plots shows the fitness scores obtained on each iteration during the training process of the genetic algorithm for all the tests. The continuous and red line shows the mean of all the runs, this will give us an idea of the average performance for each configuration. 
 At first sight, we can see that the model converge easily to a good fitness, in only 250 iterations the model increased the score from 0.18 to 0.85. And the following iterations improve the score lowly till we reach a local maximum. 
-'''
+```
 ###Note
 Since all of the sub-scores are ranged from 0 to 1, and all the $\alpha$ values are normalized, the maximum score we can obtain is 1. Also, depending on the combination of tasks, free days, people, and days in the calendar, the maximum score possible for each calendar varies. 
-'''
+```
 
 In the following table, We can see the values obtained for the execution time, and the average fitness obtained in the cuts 250, 500 and 2000.
 
