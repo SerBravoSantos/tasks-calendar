@@ -357,8 +357,9 @@ This are the results after running the genetic algorithm with the configuration 
  Calendar foto
  <div align="center">
     
-<img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScores_0_config1_cross_test10.jpg" width=500 align=center>   
+<img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/ConfigFinal.png" width=500 align=center>   
 
+    
 </div>
 
 ## Conclusions
