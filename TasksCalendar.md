@@ -357,7 +357,7 @@ This are the results after running the genetic algorithm with the configuration 
  Calendar foto
  <div align="center">
     
-<img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/ConfigFinal.png" width=500 align=center>   
+<img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/ConfigFinal.png" width=1000 align=center>   
 
     
 </div>
