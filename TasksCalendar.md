@@ -329,24 +329,37 @@ As we can see, any of the configurations could improve the performance of the ge
 - The genetic algorithm could converge slower. 
 - The mutations chosen are not effective for this problem.
 
-To check if any of the first two assumptions is correct, I am going to run another experiment comparing the base configuration with, and without mutation probability
-
-
-Hiper-Parameters Selection (Mutation Rates, Crossover Rates)
-
-
-
-Population 
-
 ## Results
 
-### Reproducing solution
+The final results will be obtained using the same scenario than in the [Experimentation](#Experimentation). We will also choose the best configuration which got the best results in a good time during the experiments:
 
-With the final configuration, We run the project and we will discuss:
+| **Parameter**                   | **Value**               | 
+|:-------------------------------:|:-----------------------:|
+| Type Mutation                   | **Random Mutation v2**  | 
+| Type of Crossover               | **Uniform Crossover**   | 
+| Uniform Crossover Probability   | **0.75**                |
+| Population                      | **75**                  | 
+| Iterations                      | **100000**              | 
 
-- Fitness Scores
-- Execution Time
-- Calendar image
+This are the results after running the genetic algorithm with the configuration for 100000 generations:
+
+</div>  
+
+<div align="center">
+
+| **Execution time** | **100000 iterations Avg Fit** |
+|:------------------:|:-----------------------------:|
+| 38 min 48 seg      |  0.9538                       |
+
+ </div>
+ 
+ 
+ Calendar foto
+ <div align="center">
+    
+<img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScores_0_config1_cross_test10.jpg" width=500 align=center>   
+
+</div>
 
 ## Conclusions
 
