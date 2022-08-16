@@ -376,6 +376,7 @@ Nobody has the same task twice.
 The tasks are equally distributed over time, as we can see in the picture. 
 
 | Person  | days in between tasks | 
+|:-------:|:---------------------:|
 | Davor   | 13                    |
 | Emma    | 15                    |
 | Seda    | 19                    |
@@ -394,7 +395,7 @@ With this example, we can see that the genetic algorithm is able to build a real
 
  <div align="center">
     
-<img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScores_0_configFinalCal2_test1.jpg" width=1000 align=center><figcaption>Final configuration best fitness</figcaption> 
+<img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScores_0_configFinalCal2_test1.jpg" width=400 align=center><figcaption>Final configuration best fitness</figcaption> 
 
 </div>
 
