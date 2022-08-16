@@ -1,0 +1,5 @@
+Abrir mingw bash 
+git pull origin gh-pages
+git add .
+git commit -m ""
+git push origin gh-pages
