@@ -204,7 +204,7 @@ The random seed will only be set for the population initialization. This seed wi
 
 <div align="center">
 
-##### Free days
+### Free days
 | **Name**    | **Free Days**     |
 |:-----------:|:-----------------:|
 | **Alberto** | 1 July - 7 July   |
@@ -364,16 +364,46 @@ This are the results after running the genetic algorithm with the configuration 
 
 In this picture of the calendar, we can observe visually the results of the genetic algorithm. 
 First, we can check if each all the rules we setted for having a good calendar are been respected by our algorithm. 
-**Fitness 1**: People can have holidays in which they will not be able to complete a task.
+- **Fitness 1**: People can have holidays in which they will not be able to complete a task.
 We can observe that any of the people have to make a task on a free day ([Free days](#Free-days))
+- **Fitness 2**: The tasks will be equally distributed in between all participants. 
+All the participants have 2 tasks assigned, except Zarra that has 1 because there are no more tasks to assign.
+- **Fitness 3**: A person will not have more than one task in a day as long as it is possible.
+Nobody has 2 tasks in a day as we can observe.
+- **Fitness 4**: The type of tasks of each participant will be as diverse as possible.
+Nobody has the same task twice. 
+- **Fitness 5**: The time in between the tasks of the participants will be as equally distributed as possible. 
+The tasks are equally distributed over time, as we can see in the picture. 
 
-2 The tasks will be equally distributed in between all participants. 
-3 A person will not have more than one task in a day as long as it is possible.
-4 The type of tasks of each participant will be as diverse as possible.
-5 The time in between the tasks of the participants will be as equally distributed as possible. 
+| Person  | days in between tasks | 
+| Davor   | 13                    |
+| Emma    | 15                    |
+| Seda    | 19                    |
+| Oscar   | 15                    |
+| Biswu   | 13                    |
+| Ceren   | 15                    |
+| Andriu  | 15                    |
+| Ayden   | 14                    |
+| Alberto | 16                    |
+| Hatice  | 18                    |
+| Sergio  | 15                    |
+| Zarra   | Only one task         |
+
+As we can see the distribution of the tasks in time is very similar. with 6 days of difference in the extreme cases.  
+With this example, we can see that the genetic algorithm is able to build a really trustable calendar based on rules that we can customize, it is a strong tool for creating a good task calendar within one hour. 
+
+ <div align="center">
+    
+<img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/bestScores_0_configFinalCal2_test1.jpg" width=1000 align=center><figcaption>Final configuration best fitness</figcaption> 
+
+</div>
+
+Appart from the results obtained in the total run, we can also observe, that the genetic algorithm converges really fast, and then it starts to enhance the fitness of the best chromosome slower. As we can see, there is a turning point in the first 2500 iterations, where it reaches a fitness score of 0.9523, meanwhile at the end of the generations the best chromosome obtained a score of 0.9538. 
+Although this score gap could mean a better distributed calendar, or an enhance in any other feature, we can customize the importance we want to give to each feature in order to fasten how fast the genetic algorithm gets a better score in that fitness in specific. This means we could obtain a really good calendar within only 5 minutes. And if we want to optimize it to the maximum, it will take a bit longer. 
 
 ## Conclusions
 
+This project was really 
 Talk about the aspects you want to reforce, the ideas, the keypoints of the algorithm, the weak and strong points
 
 ## Future Ideas
