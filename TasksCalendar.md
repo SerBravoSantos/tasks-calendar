@@ -204,6 +204,7 @@ The random seed will only be set for the population initialization. This seed wi
 
 <div align="center">
 
+##### Free days
 | **Name**    | **Free Days**     |
 |:-----------:|:-----------------:|
 | **Alberto** | 1 July - 7 July   |
@@ -354,13 +355,22 @@ This are the results after running the genetic algorithm with the configuration 
  </div>
  
  
- Calendar foto
+
  <div align="center">
     
-<img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/ConfigFinal.png" width=1000 align=center>   
+<img src="https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/graphs/ConfigFinal.png" width=1000 align=center><figcaption>Task calendar result of the final configuration</figcaption> 
 
-    
 </div>
+
+In this picture of the calendar, we can observe visually the results of the genetic algorithm. 
+First, we can check if each all the rules we setted for having a good calendar are been respected by our algorithm. 
+**Fitness 1**: People can have holidays in which they will not be able to complete a task.
+We can observe that any of the people have to make a task on a free day ([Free days](#Free-days))
+
+2 The tasks will be equally distributed in between all participants. 
+3 A person will not have more than one task in a day as long as it is possible.
+4 The type of tasks of each participant will be as diverse as possible.
+5 The time in between the tasks of the participants will be as equally distributed as possible. 
 
 ## Conclusions
 
