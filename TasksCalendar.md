@@ -445,16 +445,16 @@ The project showed me how to use a genetic algorithm for an unsupervised learnin
 1. Thinking in the definition of the problem
 2. Thinking in the constraints of the problem
 3. Define the problem:
-    3.1. Chromosome
-    3.2. Calendar, tasks, people structures.
-    3.3. Fitness Score
+    1. Chromosome
+    2. Calendar, tasks, people structures.
+    3. Fitness Score
 4. Programming all the functions neccessary for the algorithm, obtain the genes of the chromosome... 
 5. Testing the algorithm with different parameters (Optimization of the algorithm)
 I also used different libraries for:
-- Retreiving the calendar. (calendar)
-- Visualizing the calendar. (fullcalendar)
-- Plotting the results. (matplotlib)
-- ML libraries: Numpy (working with vectors)    
+    - Retreiving the calendar. (calendar)
+    - Visualizing the calendar. (fullcalendar)
+    - Plotting the results. (matplotlib)
+    - ML libraries: Numpy (working with vectors)    
 
 <!-- (Maybe adding the weakness of the algorithm, a more technical analysis (with avg exec time and space in memmory of the algorithm)) -->
 
