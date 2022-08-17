@@ -334,6 +334,8 @@ As we can see, any of the configurations could improve the performance of the ge
 
 The final results will be obtained using the same scenario than in the [Experimentation](#Experimentation). We will also choose the best configuration which got the best results in a good time during the experiments:
 
+<div align="center">
+
 | **Parameter**                   | **Value**               | 
 |:-------------------------------:|:-----------------------:|
 | Type Mutation                   | **Random Mutation v2**  | 
@@ -342,9 +344,9 @@ The final results will be obtained using the same scenario than in the [Experime
 | Population                      | **75**                  | 
 | Iterations                      | **100000**              | 
 
-This are the results after running the genetic algorithm with the configuration for 100000 generations:
-
 </div>  
+
+This are the results after running the genetic algorithm with the configuration for 100000 generations:
 
 <div align="center">
 
