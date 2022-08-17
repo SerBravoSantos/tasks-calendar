@@ -4,9 +4,8 @@
 
 ## Index
 1. **[Project Structure](#Project-Structure)**
-2. **[Usage Guide](#Usage-Guide)**
-3. **[Introduction](#Introduction)**
-4. **[Development](#Development)**
+2. **[Introduction](#Introduction)**
+3.  **[Development](#Development)**
     1. **[Calendar](#Calendar)**
     2. **[Gene](#Gene)**
     3. **[Evaluation](#Evaluation)**
@@ -14,10 +13,11 @@
     5. **[Mutation](#Mutation)**
     6. **[Crossover](#Crossover)**
     7. **[Callbacks](#Callbacks)**
-5. **[Plots and Visualization](#Plots-and-Visualization)**
-6. **[Results](#Results)**
-7. **[Conclusions](#Conclusions)**
-8. **[Future Ideas](#Future-Ideas)**
+4.  **[Plots and Visualization](#Plots-and-Visualization)**
+5. **[Results](#Results)**
+6. **[Conclusions](#Conclusions)**
+7. **[Future Ideas](#Future-Ideas)**
+8. **[Usage Guide](#Usage-Guide)**
 
  $~~~~~~~~~~~$
 
