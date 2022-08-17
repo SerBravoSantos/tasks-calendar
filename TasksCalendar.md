@@ -375,6 +375,8 @@ Nobody has the same task twice.
 - **Fitness 5**: The time in between the tasks of the participants will be as equally distributed as possible. 
 The tasks are equally distributed over time, as we can see in the picture. 
 
+ <div align="center">
+
 | Person  | days in between tasks | 
 |:-------:|:---------------------:|
 | Davor   | 13                    |
@@ -390,6 +392,8 @@ The tasks are equally distributed over time, as we can see in the picture.
 | Sergio  | 15                    |
 | Zarra   | Only one task         |
 
+</div>    
+    
 As we can see the distribution of the tasks in time is very similar. with 6 days of difference in the extreme cases.  
 With this example, we can see that the genetic algorithm is able to build a really trustable calendar based on rules that we can customize, it is a strong tool for creating a good task calendar within one hour. 
 
