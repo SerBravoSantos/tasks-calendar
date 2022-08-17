@@ -11,8 +11,8 @@ My goal is to grow personally and professionally as I enjoy the time of been par
 
 ### Projects 
 #### Task Calendar
-In this project, a genetic algorithm is used to assign each of the people of a list to each of the fixed tasks in a calendar. In the following page: 
-[Tasks Calendar](https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/TasksCalendar.md)
+In this project, a genetic algorithm is used to assign each of the people of a list to each of the fixed tasks in a calendar. In the following page 
+[Tasks Calendar Blog](https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/TasksCalendar.md)
 We can find:
 - How to use the genetic algorithm to obtain an organized calendar
 - The process made from thinking about the problem, how to solve it, what model to use
@@ -20,6 +20,8 @@ We can find:
 - A series of experiments for testing the crossover/mutation functions and the hiper-parameters that work better 
 - A conclusion
 - Possible features to add
+
+[Task Calendar Project](https://github.com/SerBravoSantos/Sergio-Bravo-Santos/tree/master)
 
 #### CHARM
 Charm is the result of a research in chatbot testing. The tool, that compliments BOTIUM, can help the chatbot programmer test the chatbot by augmenting the training dataset with different methods. There is also an improvement in some BOTIUM features. 
