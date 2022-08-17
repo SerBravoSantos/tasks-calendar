@@ -45,11 +45,11 @@ For me, coming to Dublin (Ireland) has becomed an opportunity for discovering ne
 As you can see, living abroad can open you a wide range of novel experiences that can frighten anyone but at the end it will make you learn and grow personally, as you enjoy the path. 
 
 Nevertheless, and here is where I tell you what this page is created for, I had as many good occurrences, as bad ones. 
-In specific, in this page we will talk about the really hard aspect of living with more people in(at?) the same house, and this aspect is the organization for doing all the common duties needed in order to keep the common areas of the house cleaned and enjoyable for living. 
+In specific, in this page we will talk about the really hard aspect of living with more people in the same house, and this aspect is the organization for doing all the common duties needed in order to keep the common areas of the house cleaned and enjoyable for living. 
 
 Since I came to this house, about 8 months ago, the method used for the cleanse of the common spaces have been a handmade task calendar that contained a fixed structure of different tasks spreaded over the month, and the different housemates assigned for each of the task. This is a great idea, but I was lazy to create my calendar, and this is the reason why I started developing this project!
 
- $~~~~~~~~~~~$
+$~~~~~~~~~~~$
 
 ## Model Selection 
 
@@ -59,9 +59,9 @@ First, the problem needs to be defined.
 
 In this case, we will have a calendar with fixed tasks, so the people always know when the task are due to do. Then, we will have an array of people which will be assigned for each of the tasks. The goal of the model will be assigning the best spot possible for each of the housemates. Not as easy as it seems, this goal will be depending on the rules we want to impose. 
 
-We can now discart supervised learning, we do not have a dataset that we can show to the model to learn how to predict the correct output. 
+Now, lets think the machine learning approach of the problem, we can discard supervised learning since we do not have a dataset that we can show to the model to learn how to predict the correct output. 
 
-But unsupervised learning fits well in the definition of the problem as we do not have collected data, but we do have a set of states (Each possibie combination of people assigned to the tasks in a period of time), a set of actions (this actions could be assiging a certain task to a different person for example) and goal (which in this case it will be having the best possible configuration founded).
+But unsupervised learning fits well in the definition of the problem as we do not have collected data, but we do have a set of states (Each possibie combination of people assigned to the tasks in a period of time), a set of actions (this actions could be assiging a certain task to a different person for example) and a goal (which in this case it will be having the best possible configuration founded).
 
 Having this information, I decided to implement a genetic algorithm for different reasons:
 - I already used this algorithm in one past project in the university, so I can use everything I learned into accomplish the objectives.
@@ -84,18 +84,18 @@ The genetic algorithm has 4 phases in its training process:
 3. **Crossover:** 
     The crossover function combines two chromosomes to obtain two different childs.
 4. **Mutation:** 
-    The mutation function modifies the gene the chromosomes chosen by probability. This modification adds a random factor that sometimes can improve the fitness score of the individual. 
+    The mutation function modifies the genes of the chromosomes chosen by probability. This modification could add a random factor that sometimes can improve the fitness score of the individual. 
 
 This training process will be repeated several times until we decide. If there is an specific goal, the algorithm can stop once it has reached the goal, in this case there is not an specific goal, so we can set a number of iterations or use other techniques like the early stoping which will stop the training if there is not an improvement in N iterations. 
 
- $~~~~~~~~~~~$
+$~~~~~~~~~~~$
 
 ## Development
 
 In this section, we will see how we addapted the algorithm for this specific problem and discuss the problems that have ocurred in the development process. 
 
 ### Calendar
-(Calendar library (Link to the library page)
+
 The Python [Calendar Library](https://docs.python.org/3/library/calendar.html) used in this project has functions for getting the calendar that we are going to use for the chromosome structure. In the following example, we are retrieving the calendar by month of the year selected. 
 ```
 YEAR = 2022
@@ -125,7 +125,7 @@ It is a nice structure since the gene will contain just the neccessary informati
 All of the functions needed for obtaining the day, week and task from the position of the gene are all gathered in the library calendarFunctions.   
    
 ### Evaluation
-This is probably the most problematic function to program in a GA. First, the evaluation will depends on the definition of the project, so you have to provide a function that provides you a fitness score correct. Second, the fitness score evaluated shows how better is one individual versus another, so the algorithm needs to be optimized and tuned as best as possible so the model trains correctly. If the criteria chosen for the fitness score changes, we need to addapt the evaluation method. 
+This is probably the most problematic function to program in a GA. First, the evaluation will depends on the definition of the project, so you have to provide a function that provides you a fitness score correct. Second, the fitness score evaluated shows how better is one individual compared to another, so the algorithm needs to be optimized and tuned as best as possible so the model trains correctly. If the criteria chosen for the fitness score changes, we need to addapt the evaluation method. 
 
 To evaluate the chromosome I had to collect all the aspects and restrictions I considered that would be neccessary for the task calendar to be optimum.
 1 People can have holidays in which they will not be able to complete a task.
@@ -181,7 +181,7 @@ A callback is a function that can interfear in the process of training. There ar
 - Early stopping: This function will stop the training process if in a number of iterations previously set, there is not an improvement for the best individual. 
 - Checkpointing: This function will keep track of the best individual and it will save it into a file when this new chromosome improve it's fitness score.
 
- $~~~~~~~~~~~$
+$~~~~~~~~~~~$
 
 ## Plots and Visualization
 
