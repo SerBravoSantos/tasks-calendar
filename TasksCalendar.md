@@ -28,7 +28,10 @@
 
 ## Project structure
 
+Link to the project [Task Calendar Project](https://github.com/SerBravoSantos/Sergio-Bravo-Santos/tree/master)
+
 The project has the following structure:
+- **fullCalendar/**: This folder contains the React project for visualizing the calendar.  
 - **code/**: This folder contains the files for the model, calendar functions, plots, config and the main file.
 - **data/**: This folder contains: 
     - **graphs/**: graphs for the fitness scores of the configuration we want
