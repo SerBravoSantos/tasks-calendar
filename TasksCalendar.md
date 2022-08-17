@@ -358,7 +358,7 @@ This are the results after running the genetic algorithm with the configuration 
 
  </div>
  
- 
+ $~~~~~~~~~~~$
 
  <div align="center">
     
