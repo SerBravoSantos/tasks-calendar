@@ -21,7 +21,7 @@ We can find:
 - A conclusion
 - Possible features to add
 
-[Task Calendar Project](https://github.com/SerBravoSantos/Sergio-Bravo-Santos/tree/master)
+Link to the project [Task Calendar Project](https://github.com/SerBravoSantos/Sergio-Bravo-Santos/tree/master)
 
 #### CHARM
 Charm is the result of a research in chatbot testing. The tool, that compliments BOTIUM, can help the chatbot programmer test the chatbot by augmenting the training dataset with different methods. There is also an improvement in some BOTIUM features. 
