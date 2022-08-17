@@ -13,7 +13,7 @@ My goal is to grow personally and professionally as I enjoy the time of been par
 #### Task Calendar
 In this project, a genetic algorithm is used to assign each of the people of a list to each of the fixed tasks in a calendar. In the following page 
 [Tasks Calendar Blog](https://github.com/SerBravoSantos/Sergio-Bravo-Santos/blob/gh-pages/TasksCalendar.md)
-We can find:
+we can find:
 - How to use the genetic algorithm to obtain an organized calendar
 - The process made from thinking about the problem, how to solve it, what model to use
 - The development of the project and each feature of the model
