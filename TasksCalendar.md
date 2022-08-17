@@ -440,8 +440,23 @@ $~~~~~~~~~~~$
 
 ## Conclusions
 
-This project was really 
-Talk about the aspects you want to reforce, the ideas, the keypoints of the algorithm, the weak and strong points
+This project was really satisfactory. First, the algorithm is able to optimize the task calendar based on the rules we wanted to optimize, so the goal of the project is achieved. We also get this results in a short execution time, as we said, for the example we could get a good fitness score in 2 minutes, and we could obtain an even better result in around 40 minutes. 
+The project showed me how to use a genetic algorithm for an unsupervised learning problem, and every step I needed in order to satisfy all the needs:
+1. Thinking in the definition of the problem
+2. Thinking in the constraints of the problem
+3. Define the problem:
+    3.1. Chromosome
+    3.2. Calendar, tasks, people structures.
+    3.3. Fitness Score
+4. Programming all the functions neccessary for the algorithm, obtain the genes of the chromosome... 
+5. Testing the algorithm with different parameters (Optimization of the algorithm)
+I also used different libraries for:
+- Retreiving the calendar. (calendar)
+- Visualizing the calendar. (fullcalendar)
+- Plotting the results. (matplotlib)
+- ML libraries: Numpy (working with vectors)    
+
+<> (Maybe adding the weakness of the algorithm, a more technical analysis (with avg exec time and space in memmory of the algorithm))
 
 $~~~~~~~~~~~$
 
