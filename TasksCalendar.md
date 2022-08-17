@@ -19,6 +19,8 @@
 7. **[Conclusions](#Conclusions)**
 8. **[Future Ideas](#Future-Ideas)**
 
+ $~~~~~~~~~~~$
+
 ## Project structure
 
 The project has the following structure:
@@ -35,7 +37,7 @@ notebooks/: .ipynb Colab-friendly notebooks with model training and ensembling
 input/: input data, including raw texts, backtranslated texts and meta-features
 output/: model configurations, weights and figures exported from the notebooks
 
-## Usage Guide
+ $~~~~~~~~~~~$
 
 ## Introduction
 
@@ -46,6 +48,8 @@ Nevertheless, and here is where I tell you what this page is created for, I had 
 In specific, in this page we will talk about the really hard aspect of living with more people in(at?) the same house, and this aspect is the organization for doing all the common duties needed in order to keep the common areas of the house cleaned and enjoyable for living. 
 
 Since I came to this house, about 8 months ago, the method used for the cleanse of the common spaces have been a handmade task calendar that contained a fixed structure of different tasks spreaded over the month, and the different housemates assigned for each of the task. This is a great idea, but I was lazy to create my calendar, and this is the reason why I started developing this project!
+
+ $~~~~~~~~~~~$
 
 ## Model Selection 
 
@@ -64,6 +68,8 @@ Having this information, I decided to implement a genetic algorithm for differen
 - Even though its simplicity, it gets good results and nowadays people still use this solution for solving many problems.
 - GAs are pretty flexible at the time of customizing the algorithm to get different results deppending on the problem. 
 
+ $~~~~~~~~~~~$
+
 ## Genetic Algorithm
 
 The genetic algorithm (GA) is an heuristic search, we could consider it as an stochastic variant of the local beam search, which uses multiple states that search for the goal simultaneously. 
@@ -81,6 +87,8 @@ The genetic algorithm has 4 phases in its training process:
     The mutation function modifies the gene the chromosomes chosen by probability. This modification adds a random factor that sometimes can improve the fitness score of the individual. 
 
 This training process will be repeated several times until we decide. If there is an specific goal, the algorithm can stop once it has reached the goal, in this case there is not an specific goal, so we can set a number of iterations or use other techniques like the early stoping which will stop the training if there is not an improvement in N iterations. 
+
+ $~~~~~~~~~~~$
 
 ## Development
 
@@ -173,11 +181,15 @@ A callback is a function that can interfear in the process of training. There ar
 - Early stopping: This function will stop the training process if in a number of iterations previously set, there is not an improvement for the best individual. 
 - Checkpointing: This function will keep track of the best individual and it will save it into a file when this new chromosome improve it's fitness score.
 
+ $~~~~~~~~~~~$
+
 ## Plots and Visualization
 
 For the experimentation I used [matplotlib](https://matplotlib.org/) library to plot the best fitness scores for each configuration over the iterations of the training. 
 
 I also used the library [fullcalendar](https://fullcalendar.io/) for visualizing the best chromosome result of the training. I created a React project with this component. To visualize the calendar I changed some properties and everytime I want to obtain the calendar I run the program on the localhost. 
+
+ $~~~~~~~~~~~$
 
 ## Experimentation
 
@@ -199,8 +211,11 @@ I also used the library [fullcalendar](https://fullcalendar.io/) for visualizing
 | **Random Seed** | 15        |
 
  </div>
-    
+
+ $~~~~~$
+
 The random seed will only be set for the population initialization. This seed will make sure that in all runs, we start from the same population, so the experiments made will only depend on the features we want to test.
+
 
 <div align="center">
 
@@ -233,6 +248,8 @@ We have 4 possible configurations.
 
 </div>    
     
+ $~~~~~~~~~~~$
+    
 After training the genetic algorithm with all of the configurations, I obtained the following results:
 
 <div align="center">
@@ -263,6 +280,8 @@ At first sight, we can see that the model converge easily to a good fitness, in 
         </dl>
     </dd>
 </dl>
+
+ $~~~~~~~~~~~$
 
 In the following table, We can see the values obtained for the execution time, and the average fitness obtained in the cuts 250, 500 and 2000.
 
@@ -303,8 +322,9 @@ Even though the second configuration converged faster the first iterations, it g
 | Configuration 11      | **Probabilistic Mutation** | 0.3                      | 0.01                               |
 | Configuration 12      | **Probabilistic Mutation** | 0.3                      | 0.05                               |
     
-
 </div>  
+
+ $~~~~~~~~~~~$
 
 <div align="center">
 
@@ -329,6 +349,8 @@ As we can see, any of the configurations could improve the performance of the ge
 - Population is not big enough to have diversity in the mutations. 
 - The genetic algorithm could converge slower. 
 - The mutations chosen are not effective for this problem.
+
+$~~~~~~~~~~~$
 
 ## Results
 
@@ -398,6 +420,8 @@ The tasks are equally distributed over time, as we can see in the picture.
 
 </div>    
     
+$~~~~~~~~~~~$
+ 
 As we can see the distribution of the tasks in time is very similar. with 6 days of difference in the extreme cases.  
 With this example, we can see that the genetic algorithm is able to build a really trustable calendar based on rules that we can customize, it is a strong tool for creating a good task calendar within one hour. 
 
@@ -410,10 +434,14 @@ With this example, we can see that the genetic algorithm is able to build a real
 Appart from the results obtained in the total run, we can also observe, that the genetic algorithm converges really fast, and then it starts to enhance the fitness of the best chromosome slower. As we can see, there is a turning point in the first 2500 iterations, where it reaches a fitness score of 0.9523, meanwhile at the end of the generations the best chromosome obtained a score of 0.9538. 
 Although this score gap could mean a better distributed calendar, or an enhance in any other feature, we can customize the importance we want to give to each feature in order to fasten how fast the genetic algorithm gets a better score in that fitness in specific. This means we could obtain a really good calendar within only 5 minutes. And if we want to optimize it to the maximum, it will take a bit longer. 
 
+$~~~~~~~~~~~$
+
 ## Conclusions
 
 This project was really 
 Talk about the aspects you want to reforce, the ideas, the keypoints of the algorithm, the weak and strong points
+
+$~~~~~~~~~~~$
 
 ## Future Ideas
 
@@ -422,6 +450,8 @@ The project has been useful and I got the objectives I wanted to achieve. Nevert
 - Change the calendar functions to manage different periods of time like a week, two months, a year...
 - Add more mutation functions. An example could be a mutation that permute some of the genes (This could help with the time distribution in between tasks)
 - The problem could also be fittable for other unsupervised learning models. 
+
+$~~~~~~~~~~~$
 
 ## Usage Guide
 
