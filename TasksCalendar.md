@@ -456,7 +456,7 @@ I also used different libraries for:
 - Plotting the results. (matplotlib)
 - ML libraries: Numpy (working with vectors)    
 
-[//]: # (Maybe adding the weakness of the algorithm, a more technical analysis (with avg exec time and space in memmory of the algorithm))
+<!-- (Maybe adding the weakness of the algorithm, a more technical analysis (with avg exec time and space in memmory of the algorithm)) -->
 
 $~~~~~~~~~~~$
 
