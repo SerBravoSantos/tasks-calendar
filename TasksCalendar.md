@@ -346,6 +346,8 @@ The final results will be obtained using the same scenario than in the [Experime
 
 </div>  
 
+$~~~~~~~~~~~$
+
 This are the results after running the genetic algorithm with the configuration for 100000 generations:
 
 <div align="center">
