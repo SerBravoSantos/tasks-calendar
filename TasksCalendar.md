@@ -449,7 +449,7 @@ The project showed me how to use a genetic algorithm for an unsupervised learnin
     2. Calendar, tasks, people structures.
     3. Fitness Score
 4. Programming all the functions neccessary for the algorithm, obtain the genes of the chromosome... 
-5. Testing the algorithm with different parameters (Optimization of the algorithm)
+5. Testing the algorithm with different parameters (Optimization of the algorithm).
 I also used different libraries for:
     - Retreiving the calendar. (calendar)
     - Visualizing the calendar. (fullcalendar)
