@@ -37,11 +37,6 @@ The project has the following structure:
     - **textFiles/**: Best individual fitness scores and execution time for the configuratio wantedn.
     - **calendar.txt**: Best calendar obtained in the last training.
 
-codes/: .py main scripts with data, model, training and inference modules
-notebooks/: .ipynb Colab-friendly notebooks with model training and ensembling
-input/: input data, including raw texts, backtranslated texts and meta-features
-output/: model configurations, weights and figures exported from the notebooks
-
  $~~~~~~~~~~~$
 
 ## Introduction
