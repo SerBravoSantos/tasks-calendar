@@ -229,6 +229,8 @@ The random seed will only be set for the population initialization. This seed wi
 
 </div>
 
+$~~~~~~~~~~~$
+
 ### Crossover Selection
 
 This experiment will determine which crossover method seems to work better for the problem itself. 
