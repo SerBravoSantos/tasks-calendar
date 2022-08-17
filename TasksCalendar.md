@@ -452,10 +452,10 @@ The project showed me how to use a genetic algorithm for an unsupervised learnin
 5. Testing the algorithm with different parameters (Optimization of the algorithm).
 
 I also used different libraries for:
-    - Retreiving the calendar. (calendar)
-    - Visualizing the calendar. (fullcalendar)
-    - Plotting the results. (matplotlib)
-    - ML libraries: Numpy (working with vectors)    
+- Retreiving the calendar. (calendar)
+- Visualizing the calendar. (fullcalendar)
+- Plotting the results. (matplotlib)
+- ML libraries: Numpy (working with vectors)    
 
 <!-- (Maybe adding the weakness of the algorithm, a more technical analysis (with avg exec time and space in memmory of the algorithm)) -->
 
