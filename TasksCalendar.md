@@ -5,19 +5,24 @@
 ## Index
 1. **[Project Structure](#Project-Structure)**
 2. **[Introduction](#Introduction)**
-3.  **[Development](#Development)**
+3. **[Model Selection](#Model-Selection)**
+4. **[Genetic Algorithm](#Genetic-Algorithm)**
+5. **[Development](#Development)**
     1. **[Calendar](#Calendar)**
     2. **[Gene](#Gene)**
     3. **[Evaluation](#Evaluation)**
     4. **[Selection](#Selection)**
-    5. **[Mutation](#Mutation)**
-    6. **[Crossover](#Crossover)**
+    5. **[Crossover](#Crossover)**
+    6. **[Mutation](#Mutation)**
     7. **[Callbacks](#Callbacks)**
-4.  **[Plots and Visualization](#Plots-and-Visualization)**
-5. **[Results](#Results)**
-6. **[Conclusions](#Conclusions)**
-7. **[Future Ideas](#Future-Ideas)**
-8. **[Usage Guide](#Usage-Guide)**
+4. **[Plots and Visualization](#Plots-and-Visualization)**
+5. **[Experimentation](#Experimentation)**
+    1. **[Crossover Selection](#Crossover-Selection)**
+    2. **[Mutation Selection](#Mutation-Selection)**
+7. **[Results](#Results)**
+8. **[Conclusions](#Conclusions)**
+9. **[Future Ideas](#Future-Ideas)**
+10. **[Usage Guide](#Usage-Guide)**
 
  $~~~~~~~~~~~$
 
