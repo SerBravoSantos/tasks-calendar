@@ -1,2 +1,0 @@
-cambiar src components Calendar.jsx
-npm start en la terminal
