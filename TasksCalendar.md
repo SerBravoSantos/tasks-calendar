@@ -19,8 +19,9 @@
 5. **[Experimentation](#Experimentation)**
     1. **[Crossover Selection](#Crossover-Selection)**
     2. **[Mutation Selection](#Mutation-Selection)**
-7. **[Results](#Results)**
-8. **[Conclusions](#Conclusions)**
+6. **[Results](#Results)**
+7. **[Conclusions](#Conclusions)**
+8. **[PYGad](#PYGad)**
 9. **[Future Ideas](#Future-Ideas)**
 10. **[Usage Guide](#Usage-Guide)**
 
@@ -461,6 +462,34 @@ I also used different libraries for:
 - ML libraries: Numpy (working with vectors)    
 
 <!-- (Maybe adding the weakness of the algorithm, a more technical analysis (with avg exec time and space in memmory of the algorithm)) -->
+
+$~~~~~~~~~~~$
+
+## PYGad
+
+I recently replied the project using the library pygad which already has implementations for the genetic algorithm previously showed. 
+
+This implementation already implements the functions such as the selection, mutation, crossover and the callbacks necessaries. The only task you have to worry about is the implementation of the fitness or evaluation funtion which will score the gene so they can be compared. 
+
+Here is an example of an instance of our genetic algorithm using the library [pygad](https://matplotlib.org/](https://pygad.readthedocs.io/en/latest/) 
+
+...
+    ga_instance = pygad.GA(num_generations=num_generations,
+                        initial_population=initial_population,
+                        fitness_func=fitness_func,
+                        sol_per_pop=sol_per_pop,
+                        gene_space=gene_space,
+                        num_genes=num_genes)
+...
+
+The instance of the class needs the following arguments to be created:
+
+- Number of generations: Number of iterations for the training process
+- Initial Population: In this case we will choose a randomly generated population
+- Fitness Function: Our Fitness function we created to score the genes
+- solutions per population: Number of solutions we want to obtain 
+- gene space: All the values that the gene can have in the chromosome
+- number of genes: Number of genes in a population
 
 $~~~~~~~~~~~$
 
