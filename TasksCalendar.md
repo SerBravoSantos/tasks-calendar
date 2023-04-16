@@ -471,7 +471,7 @@ I recently replied the project using the library pygad which already has impleme
 
 This implementation already implements the functions such as the selection, mutation, crossover and the callbacks necessaries. The only task you have to worry about is the implementation of the fitness or evaluation funtion which will score the gene so they can be compared. 
 
-Here is an example of an instance of our genetic algorithm using the library [pygad](https://matplotlib.org/](https://pygad.readthedocs.io/en/latest/) 
+Here is an example of an instance of our genetic algorithm using the library [pygad](https://pygad.readthedocs.io/en/latest/) 
 
 ...
     ga_instance = pygad.GA(num_generations=num_generations,
