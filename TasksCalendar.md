@@ -473,14 +473,14 @@ This implementation already implements the functions such as the selection, muta
 
 Here is an example of an instance of our genetic algorithm using the library [pygad](https://pygad.readthedocs.io/en/latest/) 
 
-...
+```
     ga_instance = pygad.GA(num_generations=num_generations,
                         initial_population=initial_population,
                         fitness_func=fitness_func,
                         sol_per_pop=sol_per_pop,
                         gene_space=gene_space,
                         num_genes=num_genes)
-...
+```
 
 The instance of the class needs the following arguments to be created:
 
