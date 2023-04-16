@@ -21,7 +21,7 @@
     2. **[Mutation Selection](#Mutation-Selection)**
 6. **[Results](#Results)**
 7. **[Conclusions](#Conclusions)**
-8. **[PYGad](#PYGad)**
+8. **[PYGad](#PYGad)** (NEW)
 9. **[Future Ideas](#Future-Ideas)**
 10. **[Usage Guide](#Usage-Guide)**
 
