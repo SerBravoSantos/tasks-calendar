@@ -521,5 +521,6 @@ To generate a calendar you can follow the next steps:
     3. ntest: number of tests for each configuration you set
     4. tests Flags: If you want to reproduce the experiments set this tests flags to true
 
-If you want to obtain the calendar using fullCalendar, you have to copy the output from textfiles/calendars/calendar_configX.txt inside the events brackets (replace the last calendar if it exists) in the file calendar/client/src/Components/Calendar.jsx
-Once done, open the command prompt in calendar/client folder, and run the command npm start (you need to have nodejs installed)
+If you want to obtain the calendar using fullCalendar, you have to copy the output from textfiles/calendars/calendar_configX.txt inside the events brackets (replace the last calendar if it exists) in the file calendar/client/src/Components/Calendar.jsx  
+
+Once done, open the command prompt in calendar/client folder, and run the command npm start (you need to have nodejs installed wth all the dependencies npm install)
