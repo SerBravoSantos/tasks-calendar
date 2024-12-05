@@ -315,10 +315,10 @@ Even though the second configuration converged faster the first iterations, it g
 
 | **Name**              | **Mutation**               | **Mutation Probability** | **Probability of Muting the Gene** |
 |:---------------------:|:--------------------------:|:------------------------:|:----------------------------------:|
-| Configuration 1       | **Random Mutation  **      | 0.1                      | 0.01                               |
-| Configuration 2       | **Random Mutation  **      | 0.1                      | 0.05                               |
-| Configuration 3       | **Random Mutation  **      | 0.3                      | 0.01                               |
-| Configuration 4       | **Random Mutation  **      | 0.3                      | 0.05                               |
+| Configuration 1       | **Random Mutation**      | 0.1                      | 0.01                               |
+| Configuration 2       | **Random Mutation**      | 0.1                      | 0.05                               |
+| Configuration 3       | **Random Mutation**      | 0.3                      | 0.01                               |
+| Configuration 4       | **Random Mutation**      | 0.3                      | 0.05                               |
 | Configuration 5       | **Random Mutation v2**     | 0.1                      | 0.01                               |
 | Configuration 6       | **Random Mutation v2**     | 0.1                      | 0.05                               |
 | Configuration 7       | **Random Mutation v2**     | 0.3                      | 0.01                               |
