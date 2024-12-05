@@ -90,7 +90,7 @@ The genetic algorithm has 4 phases in its training process:
 4. **Mutation:** 
     The mutation function modifies the genes of the chromosomes chosen by probability. This modification could add a random factor that sometimes can improve the fitness score of the individual. 
 
-This training process will be repeated several times until we decide. If there is an specific goal, the algorithm can stop once it has reached the goal, in this case there is not an specific goal, so we can set a number of iterations or use other techniques like the early stoping which will stop the training if there is not an improvement in N iterations. 
+This training process will be repeated n defined iterations. If there is an specific goal, the algorithm can stop once it has reached the goal, in this case there is not an specific goal, so we can set a number of iterations or use other techniques like the early stoping which will stop the training if there is not an improvement in N iterations. 
 
 $~~~~~~~~~~~$
 
@@ -129,22 +129,22 @@ It is a nice structure since the gene will contain just the neccessary informati
 All of the functions needed for obtaining the day, week and task from the position of the gene are all gathered in the library calendarFunctions.   
    
 ### Evaluation
-This is probably the most problematic function to program in a GA. First, the evaluation will depends on the definition of the project, so you have to provide a function that provides you a fitness score correct. Second, the fitness score evaluated shows how better is one individual compared to another, so the algorithm needs to be optimized and tuned as best as possible so the model trains correctly. If the criteria chosen for the fitness score changes, we need to addapt the evaluation method. 
+This is probably the most problematic function to program in a GA. First, the evaluation will depends on the definition of the project, so you have to provide a function that provides you a fitness score correct. Second, the fitness score evaluated shows how better is one individual compared to another, so the algorithm needs to be optimized and tuned as best as possible so the model trains correctly. If the criteria chosen for the fitness score change, we need to adapt the evaluation method. 
 
 To evaluate the chromosome I had to collect all the aspects and restrictions I considered that would be neccessary for the task calendar to be optimum.
 1 People can have holidays in which they will not be able to complete a task.
-2 The tasks will be equally distributed in between all participants. 
+2 The tasks will be equally distributed among all participants. 
 3 A person will not have more than one task in a day as long as it is possible.
 4 The type of tasks of each participant will be as diverse as possible.
 5 The time in between the tasks of the participants will be as equally distributed as possible. 
 
-Based on this criteria, I created 5 different fitness scores for each of them, and combined them in the following equation.
+Based on this criteria, I created 5 different fitness scores for each of them and combined them in the following equation.
 
 $$ Total Fitness Score = fit1\alpha_1 + fit2\alpha_2 + fit3\alpha_3 + fit4\alpha_4 + fit5\alpha_5 $$
 
 $\alpha$ is the multiplier that will adjust the formula depending on the priority we want to have for each rule.
 
-The combination of all of the scores into a final one was tedious for several reasons. 
+The combination of all of the scores into a final one was a tedious task to perfection for several reasons. 
 
 On one hand, we have to decide $\alpha$ for all the fitness scores. The genetic algorithm, by probability, tends to choose the stronger individuals, and the score of this individuals depends on the value we set for each of the $\alpha$ values. This means that the genetic algorithm will reward differently, different transformations of the chromosomes that affect to different rules. 
 
@@ -164,7 +164,7 @@ The population is grouped by pairs and crossed to obtain the new evolved populat
 
 I am going to try two different methods for this project.
 
-- Uniform Crossover: The algorithm iterates over the positions of the chromosome. In each iteration, there will be a probability of crossing a certain gene of one of  chromosomes with the gene in the same possition of the other chromosome.  
+- Uniform Crossover: The algorithm iterates over the positions of the chromosome. In each iteration, there will be a probability of crossing a certain gene of one of chromosomes with the gene in the same possition of the other chromosome.  
 - K-Points Crossover: Both chromosomes are divided by K parts, and this K parts are mixed alternately to form the childs. 
 
 ### Mutation
