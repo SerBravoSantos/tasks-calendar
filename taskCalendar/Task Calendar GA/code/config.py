@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 YEAR = 2022     # YEAR
 MONTH = 7       # JUNE
+=======
+YEAR = 2024     # YEAR 
+MONTH = 12       # DIC 
+>>>>>>> feature/nuevo
    
 # WEEK DAYS
 MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY = range(0, 7)
@@ -36,7 +41,11 @@ COLOR = {
 DAYSOFF = {  ALBERTO: [((WEEK1, FRIDAY), (WEEK2, THURSDAY))] 
             ,OSCAR: []
             ,ANDRIU: []
+<<<<<<< HEAD
             ,ZARRA: [((WEEK1, FRIDAY), (WEEK2, THURSDAY))]       
+=======
+            ,ZARRA: [((WEEK1, FRIDAY), (WEEK2, THURSDAY)), ((WEEK3, FRIDAY), (WEEK5, THURSDAY))]       
+>>>>>>> feature/nuevo
             ,AYDEN: []         
             ,BISWU: []
             ,CEREN: []         
@@ -158,7 +167,11 @@ configFinal = { 'name': "configFinalCal2",
                                     "kpoints": 5, 
                                     "uniformCrossValue": 0.75, 
                                     "population": 200, 
+<<<<<<< HEAD
                                     "iterations": 1000,
+=======
+                                    "iterations": 10000,
+>>>>>>> feature/nuevo
                                     "cuts": [199]
                     },
                 }
