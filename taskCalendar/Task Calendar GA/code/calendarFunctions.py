@@ -99,11 +99,7 @@ def printChromosome(calendarPath, chromosome, calendarStarts, currentCalendar, t
     yearStr = str(year)
     monthStr = str(month)
     if len(monthStr) == 1:
-<<<<<<< HEAD
-        monthstr = "0" + monthStr
-=======
         monthStr = "0" + monthStr
->>>>>>> feature/nuevo
     for week, _ in enumerate(currentCalendar):
         for i, day in enumerate(currentCalendar[week]): 
             dayStr = str(day)
@@ -114,11 +110,7 @@ def printChromosome(calendarPath, chromosome, calendarStarts, currentCalendar, t
                     task = getTask(dupla[1])
                     person = getPerson(dupla[0])
                     strCalendar += "{ title: '" + task + ": " + person + "', date: '" + yearStr \
-<<<<<<< HEAD
-                                    + "-" + monthstr + "-" + dayStr + "', color: '" + COLOR[dupla[1]] + "' },\n"
-=======
                                     + "-" + monthStr + "-" + dayStr + "', color: '" + COLOR[dupla[1]] + "' },\n"
->>>>>>> feature/nuevo
     with open(calendarPath, "w+") as f:
         f.write(strCalendar)
 
