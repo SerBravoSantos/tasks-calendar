@@ -70,11 +70,7 @@ random.seed(int(t) % 2**32)
 # Change fitness function to use tensorflow and make use of the GPU
 # Modulate sub-fitness, if it does not affect to the Computational time.
 
-<<<<<<< HEAD
-def fitness_func(solution, solution_idx):
-=======
 def fitness_func(self, solution, solution_idx):
->>>>>>> feature/nuevo
         
     peopleCountList = []
     freeDaysFitness = 0
@@ -184,31 +180,11 @@ def fitness_func(self, solution, solution_idx):
     return fitness1 * alpha1 + fitness2 * alpha2 + fitness3 * alpha3 + fitness4 * alpha4 + fitness5 * alpha5
 
 
-<<<<<<< HEAD
-num_generations = 10000
-=======
 num_generations = 1000
->>>>>>> feature/nuevo
 num_parents_mating = 1
 sol_per_pop = 200
 num_genes = len(initial_population)
 
-<<<<<<< HEAD
-start = time.time()
-with tf.device('/CPU:0'):
-    ga_instance = pygad.GA(num_generations=num_generations,
-                        num_parents_mating=num_parents_mating,
-                        initial_population=initial_population,
-                        fitness_func=fitness_func,
-                        sol_per_pop=sol_per_pop,
-                        gene_space=gene_space,
-                        num_genes=num_genes)
-
-    ga_instance.run()
-end = time.time() - start
-print("time with CPU: ", end, "Results: ", ga_instance.best_solution())
-ga_instance.plot_result()
-=======
 # start = time.time()
 # with tf.device('/CPU:0'):
 #     ga_instance = pygad.GA(num_generations=num_generations,
@@ -225,7 +201,6 @@ ga_instance.plot_result()
 # ga_instance.plot_fitness()
 # ga_instance.plot_genes()
 # ga_instance.plot_new_solution_rate()
->>>>>>> feature/nuevo
 
 start = time.time()
 with tf.device('/GPU:0'):
@@ -240,10 +215,6 @@ with tf.device('/GPU:0'):
     ga_instance.run()
 end = time.time() - start
 print("time with GPU: ", end, "Results: ", ga_instance.best_solution())
-<<<<<<< HEAD
-ga_instance.plot_result()
-=======
 ga_instance.plot_fitness()
 ga_instance.plot_genes()
 ga_instance.plot_new_solution_rate()
->>>>>>> feature/nuevo

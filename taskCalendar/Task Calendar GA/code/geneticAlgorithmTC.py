@@ -9,10 +9,9 @@ import math
 from calendarFunctions import *
 import time
 
-# Falta Weighted Tasks Fitness 6
-# Falta Pensar prioridad de tareas? (Separar BINS de las demás tareas)
-# Limpiar Código
-# Modular + poco Acoplamiento
+"""In this file, we have the class Chromosome and GA 
+"""
+
 codePath = os.path.dirname(os.path.realpath(__file__))
 dirPath = os.path.abspath(os.path.join(codePath, os.pardir))
 dataPath = os.path.join(dirPath, "data")
@@ -27,8 +26,29 @@ fit4Path = os.path.join(textfilesPath, "bestFit4.txt")
 fit5Path = os.path.join(textfilesPath, "bestFit5.txt")
 
 class Chromosome:
-
+    """This class contains the attributes and methods needed for the chromosome.
+    
+    Attributes:
+        calendar (list[list[int]]): Contains all weeks and days of the month for which we want a tasks calendar. 
+        tasksDict (dict[int, list[int]]): Contains the planification of the tasks we need to make by week.
+            Example:
+                tasksDict = {MONDAY: [TOB], TUESDAY: [TIB, CBB],  WEDNESDAY: [CBB], THURSDAY:[CK], FRIDAY:[CSB], SATURDAY:[], SUNDAY: [VS]}
+        people (list[int]): Contains all the people participating in the task calendar.
+        mutationProb (float) = the probability for each gene of the chromosome to mutate (Change the value of the gene).
+        info (list[int]) = This contains all the genes of the chromosome in case that we want to train one population we already trained before. 
+    """
     def __init__(self, calendar, tasksDict, people, mutationProb=0.05, info=None):
+        """Initializes the chromosome to their correspondent value
+        
+        Attributes:
+            calendar (list[list[int]]): Contains all weeks and days of the month for which we want a tasks calendar. 
+            tasksDict (dict[int, list[int]]): Contains the planification of the tasks we need to make by week.
+                Example:
+                    tasksDict = {MONDAY: [TOB], TUESDAY: [TIB, CBB],  WEDNESDAY: [CBB], THURSDAY:[CK], FRIDAY:[CSB], SATURDAY:[], SUNDAY: [VS]}
+            people (list[int]): Contains all the people participating in the task calendar.
+            mutationProb (float) = the probability for each gene of the chromosome to mutate (Change the value of the gene).
+            info (list[int]) = This contains all the genes of the chromosome in case that we want to train one population we already trained before
+        """
         self.calendar = calendar
         self.nTasks = sum([len(tasks) for tasks in list(tasksDict.values())])
         self.diffTask = len(set([val for values in tasksDict.values() for val in values]))
@@ -42,30 +62,44 @@ class Chromosome:
 
         self.tasksDict = tasksDict
         self.people = people
-        # First create array for the tasks
+        # If we want to retrained a chromosome we just assign the info, if not, we randomly create the gene
         if info:
             self.info = info
+            self.population = list(set(self.info))
         else:
             random.seed(15)
             self.info = [random.choice(list(people)) for week in calendar 
-                                        for dayPos, dayMonth in enumerate(week) 
-                                            if dayMonth != 0
-                                                for dayOfWeek, tasks in tasksDict.items() 
-                                                    if dayPos == dayOfWeek
-                                                        for _ in tasks]
-            t = 1000 * time.time() # current time in milliseconds
+                                                        for dayPos, dayMonth in enumerate(week) 
+                                                            if dayMonth != 0
+                                                                for dayOfWeek, tasks in tasksDict.items() 
+                                                                    if dayPos == dayOfWeek
+                                                                        for _ in tasks]
+            self.population = list(set(self.info))
+            t = 1000 * time.time()
             random.seed(int(t) % 2**32)
         
         self.fitness = 0
         self.mutationProb = mutationProb
 
     def __str__(self):
+        """Returns the string of a chromosome
+
+        Returns:
+            str: string of the list that represents the genes of the chromosome
+        """
         return str(self.info)  
 
-    
-    # Sets the fitness of the chromosome by evaluating it
     def evaluate(self):
+        """Evaluates the fitness of the chromosome by adding the score of 5 aspects we want to take into account for the calendar
             
+            Modifies:
+                self.fitness1: The fitness of the chromosome will be affected negatively if a person is assigned to a certain task in a day that he is off.
+                self.fitness2: All the people have more or less the same number of tasks.
+                self.fitness3: People should not do more than one tasks each day as long as this is possible.
+                self.fitness4: People should have different tasks.
+                self.fitness5: The tasks of a person should be as much spreaded in time as possible. 
+                self.fitness: The final score that combines all the fitnesses in one. 
+        """
         peopleCountList = []
         freeDaysFitness = 0
 
@@ -100,28 +134,25 @@ class Chromosome:
         # Fit 4. For each person benefit how different are the tasks in between each others
         taskDiffCountFitness = 0
 
-        # Fit 5: 
-        # Antiguo 
-        # maxPeopleDistribution = math.sqrt(len(self.people)) * int(averageTasks_rounded) * len(self.info)/averageTasks_rounded
-        
-        # We need to calculate the maximum distance between tasks, which has to be the number of people
-            # dist_max_between_tasks = len(self.people)
+        """
+        Fit 5: 
+        We need to calculate the maximum distance between tasks, which has to be the number of people
+            - dist_max_between_tasks = len(self.people)
+        For getting the perfect distribution we need to add n-1 times the ideal distance for all the people
+        The number of times we need to multiply the distance is equal to the number of people in the calendar.
+        This is because in the perfect scenario, one person will have to do a tasks every cicle where everyone has being assigned a task. 
+        Since we meassure the distance between the nearest 2 tasks, we do not count this distance for the first tasks, so we will substract 1 from n_times
+            - n_times_ = len(self.people) - 1
+        Then, in a calendar we will have to multiply that distance by the number of tasks for the evaluated person, without counting the first task. 
+            - ideal_distribution_person = avg_task * n_times_
+                where 
+            - avg_task = len(self.info)/len(self.people)
+        Now, we only need to multiply this ideal distribution per person by the number of people in the calendar. 
+            - maxPeopleDistribution = (len(self.people) * n_times_) * math.sqrt(avg_tasks) 
+                                    = (len(self.people) * (len(self.people) - 1)) * math.sqrt(avg_tasks)
+        """
         avg_tasks = len(self.info)/len(self.people)
-        # For getting the perfect distribution we need to add n-1 times the ideal distance for all the people
-        # The number of times we need to multiply the distance is equal to the number of people in the calendar.
-        # This is because in the perfect scenario, one person will have to do a tasks every cicle where everyone has being assigned a task. 
-        # Since we meassure the distance between the nearest 2 tasks, we do not count this distance for the first tasks, so we will substract 1 from n_times
-        # n_times_ = len(self.people) - 1
-        # Then, in a calendar we will have to multiply that distance by the number of tasks for the evaluated person, without counting the first task. 
-        # ideal_distribution_person = avg_task * n_times_
-        # where 
-        # avg_task = len(self.info)/len(self.people)
-        # Now, we only need to multiply this ideal distribution per person by the number of people in the calendar. 
-        # maxPeopleDistribution = (len(self.people) * n_times_) * math.sqrt(avg_tasks) = (len(self.people) * (len(self.people) - 1)) * math.sqrt(avg_tasks-1)
-        
-       
-        
-        maxPeopleDistribution = (len(self.people) * (len(self.people) - 1)) * math.sqrt(avg_tasks-1)
+        maxPeopleDistribution = (len(self.people) * (len(self.people) - 1)) * math.sqrt(avg_tasks)
         
         
         for person in self.people:
@@ -133,14 +164,16 @@ class Chromosome:
                     tasksPerPersonFitness -= abs(peopleCount[person] - averageTasks_rounded)**2/len(self.info)
             else: # If that person is not participating then is doing 0 tasks
                 tasksPerPersonFitness -= averageTasks_rounded**2/len(self.info)
-            ## Fit 5. Distribution of the task of one person are expanded
-            # Searching for the possible cases I came with one in which we could have the same results for different combinations that are not equaly good for the calendar. Lets take a calendar with 9 tasks and 3 people (A,B,C). 
-            # Then lets take this 2 examples:
-            # A B C A B C A B C -> A = 3 + 3, B = 3 + 3, C = 3 + 3 -> This, as we can see, should give us the perfect score since here the maxPeopleDistribution is 9 * 2 = 18, so 18/18 = 1. 
-            # A B A C B C A B C -> A = 2 + 4, B = 3 + 3, C = 2 + 4 -> This will also give us the same result as the one before (1), but we see that the first solution is going to be more distributed. 
-            # As a solution, I will sqrt the distance between tasks, so then, our first solution will be better always, now our max distribution will be (len(self.people)**2-len(self.people)) * math.sqrt(avg_tasks) = (9-3)*3**1/2  
-            # 3**1/2 + 3**1/2 + 3**1/2 + 3**1/2 + 3**1/2 + 3**1/2 = 10.39 / 10.39 = 1
-            # 2**1/2 + 4**1/2 + 3**1/2 + 3**1/2 + 2**1/2 + 4**1/2 = 3.46 + 2.82 + 4 / 12.72 = 10.28 / 10.39 = 0.989
+            """
+            Fit 5. Distribution of the task of one person are expanded
+            Searching for the possible cases I came with one in which we could have the same results for different combinations that are not equaly good for the calendar. Lets take a calendar with 9 tasks and 3 people (A,B,C). 
+            Then lets take this 2 examples:
+                - A B C A B C A B C -> A = 3 + 3, B = 3 + 3, C = 3 + 3 -> This, as we can see, should give us the perfect score since here the maxPeopleDistribution is 9 * 2 = 18, so 18/18 = 1. 
+                - A B A C B C A B C -> A = 2 + 4, B = 3 + 3, C = 2 + 4 -> This will also give us the same result as the one before (1), but we see that the first solution is going to be more distributed. 
+            As a solution, I will sqrt the distance between tasks, so then, our first solution will be better always, now our max distribution will be (len(self.people)**2-len(self.people)) * math.sqrt(avg_tasks) = (9-3)*3**1/2  
+                - 3**1/2 + 3**1/2 + 3**1/2 + 3**1/2 + 3**1/2 + 3**1/2 = 10.39 / 10.39 = 1
+                - 2**1/2 + 4**1/2 + 3**1/2 + 3**1/2 + 2**1/2 + 4**1/2 = 3.46 + 2.82 + 4 / 12.72 = 10.28 / 10.39 = 0.989
+            """
             distribution = 0
             if person in peopleIndexTasks.keys():
                 for i in range(len(peopleIndexTasks[person])-1, 0, -1):
@@ -166,7 +199,7 @@ class Chromosome:
         for week in range(len(self.calendar)):
             for day in range(7):   
                 peopleTasksInDay = []
-                peopleTasksInDaySet = set()
+                peopleTasksInDaySet = {}
                 for _ in range(self.taskPerDay[day]):
                     if self.calendar[week][day] != 0:
                         peopleTasksInDay.append(self.info[taskCount])
@@ -182,53 +215,49 @@ class Chromosome:
 
                             tasksInSameDayFitness += repetitions/len(self.info)
 
-        # 1. 
         self.fitness1 = freeDaysFitness
-
-        # 2. 
         self.fitness2 = tasksPerPersonFitness
-        
-        # 3. 
         self.fitness3 = tasksInSameDayFitness
-
-    	# 4.
         self.fitness4 = taskDiffCountFitness
-
-        ## 5. 
         self.fitness5 = peopleDistancesFitness
-
-
-        # Chromosome fitness will be a weighted combination of all scores 
         self.fitness = self.fitness1 * alpha1 + self.fitness2 * alpha2 + self.fitness3 * alpha3 + self.fitness4 * alpha4 + self.fitness5 * alpha5
 
-    # Updates the array of people of the chromosome
     def updatePeople(self):
-        self.people = list(set(self.info))
+        """Updates the array of people of the chromosome 
+        """
+        self.population = list(set(self.info))
         
     # Mutation Funtion for the chromosome
     def mutateChromosome(self, typeMutation = RANDOM_MUTATION_PEOPLE_PROP):
+        """Function that mutates the chromosome. 
         
+        Args:
+            typeMutation (int): enumerate that indicates the type of mutation
+        
+        There are different types of mutation:
+            RANDOM_MUTATION: Changes the gen with any of the other people in the pool.
+            RANDOM_MUTATION_PEOPLE_NOT_IN: Changes the gen with any of the other people in the pool, but if any of the people is not participating in the calendar it will first take from this pool.
+            RANDOM_MUTATION_PEOPLE_PROP: It establishes a probability for each person depending on how much do they appear in the calendar. The less they appear in the calendar, the better the probability of being chosen. 
+        """
         # We create a copy of the chromosome which will be the child (As we modify it)
         chromosomeChild = copy.deepcopy(self)    
 
         if typeMutation == RANDOM_MUTATION:
             for i, info in enumerate(self.info):
-                if self.mutationProb >= random.randint(0,10)/10:
-                    choices = [person for person in self.people if info != person]
+                if self.mutationProb >= random.randint(0,100)/100:
+                    choices = [person for person in self.population if info != person]
                     chromosomeChild.info[i] = random.choice(choices)
-
         elif typeMutation == RANDOM_MUTATION_PEOPLE_NOT_IN:
-            peopleNotIn = set([person for person in self.people if not person in self.info])
+            peopleNotIn = set([person for person in self.population if not person in self.info])
             if not peopleNotIn:
-                peopleNotIn = self.people
+                peopleNotIn = self.population
             for i, info in enumerate(self.info):
                 if self.mutationProb >= random.randint(0,10)/10:
                     choices = [person for person in peopleNotIn if info != person]
                     chromosomeChild.info[i] = random.choice(choices)
-
         elif typeMutation == RANDOM_MUTATION_PEOPLE_PROP:
-            probPeople = {person: 1 for person in self.people}
-            for person in self.people:
+            probPeople = {person: 1 for person in self.population}
+            for person in self.population:
                 for personGen in self.info:
                     if person == personGen:
                         probPeople[person] += 1
@@ -236,19 +265,37 @@ class Chromosome:
             probPeopleInv = probPeopleInv/sum(probPeopleInv)
             for i, info in enumerate(self.info):
                 if self.mutationProb >= random.randint(0,10)/100:
-                    chromosomeChild.info[i] = choice(self.people, 1, p=probPeopleInv)[0]
+                    chromosomeChild.info[i] = choice(self.population, 1, p=probPeopleInv)[0]
                     
-
         self.updatePeople()
-
         return chromosomeChild
             
 
 class GA:
-
+    """This class contains the attributes and methods needed for the genetic algorithm.
+    
+    Attributes:
+        calendar (list[list[int]]): Contains all weeks and days of the month for which we want a tasks calendar. 
+        tasksDict (dict[str, list[str]]): Contains the planification of the tasks we need to make by week.
+            Example:
+                tasksDict = {MONDAY: [TOB], TUESDAY: [TIB, CBB],  WEDNESDAY: [CBB], THURSDAY:[CK], FRIDAY:[CSB], SATURDAY:[], SUNDAY: [VS]}
+        people (list[int]): Contains all the people participating in the task calendar.
+        sizePopulation (int): size of the Population.
+        mutationGeneProb (float) = the probability for each gene of the chromosome to mutate (Change the value of the gene).
+        typeSelection (int) = defines the type of selection we want for our algorithm.
+        typeMutation (int) = defines the type of mutation we want for our algorithm.
+        typeCrossover (int) = defines the type of crossover function we want for our algorithm.
+        mutationProb (float) = Probability of mutating the chromosome evaluated.
+        kpoints = Number of elbows we want for the KPOINT crossover.
+        uniformCross = the probability of swapping the genes. 
+        load = True if we want to load the population.
+        early_stop = if setted, defines the number of iterations the algorithm does without having a better individual before stopping. None, if we do not want early stopping 
+    """
     def __init__(self, calendar, tasksDict, people, sizePopulation, mutationGeneProb=0.05, typeSelection = ROULETTE, 
                     typeMutation = RANDOM_MUTATION_PEOPLE_PROP, typeCrossover = UNIFORMCROSSOVER, 
                         mutationProb = 0.5, kpoints=3, uniformCross = 0.5, load=False, earlyStop = None):
+        """Initializes the GA.
+        """
         self.sizePopulation = sizePopulation
         self.typeSelection = typeSelection
         self.typeMutation = typeMutation
@@ -257,6 +304,7 @@ class GA:
         self.kpoints = kpoints
         self.uniformCross = uniformCross
         self.earlyStop = earlyStop
+        
         if load:
             print("\nloading from file\n")
             self.population = self.loadChromoFile(bestGensSavePath, calendar, tasksDict, people, mutationProb)
@@ -268,11 +316,25 @@ class GA:
         self.best = self.population[indBest]
         
     def __str__(self):
+        """Returns the string of the GA.
+
+        Returns:
+            str: Returns the number of chromosomes of the population.
+        """
         return "Population of: {}".format(self.sizePopulation)
 
     def trainGA(self, iterations=20):
+        """trains the GA
 
+        Args:
+            iterations (int): number of iterations for the training. Defaults to 20.
+        """
         def writeFitnessFiles(iteration):
+            """write all the files for the experiments.
+
+            Args:
+                iteration (int): the number of iteration. 
+            """
             if iteration == 0:
                 with open(bestGensPath, "w+") as f:
                     f.write("it\t\tinfo\t\tfitness\n")
@@ -309,6 +371,7 @@ class GA:
                             f.write("{},".format(gene))
                         f.write("\n")
 
+        # Start of the algorithm 
         bestScores = []
         bestScores1 = []
         bestScores2 = []
@@ -321,13 +384,12 @@ class GA:
             
             # Evaluate
             self.scores = self.evaluate()
-            
             # Get Best chromosome
             indBest = np.argmax(self.scores)
-
             # Write fitness into files
             writeFitnessFiles(iteration)
         
+            # Breaks if the fitness of the actual popularion is not stricktly higher than the fitness of the best solution for x iterations
             if self.earlyStop:
                 if bestLastIteration >= self.earlyStop:
                     break                
@@ -346,7 +408,7 @@ class GA:
 
             print("iteration: {} Best generation Score: {}".format(iteration, self.best.fitness))
         
-            # Selection
+            # Selection 
             self.sortIndexScores = np.argsort(self.scores)[::-1]
             newPopulation = self.selection()
             covPopulation = []
@@ -366,6 +428,11 @@ class GA:
         return [bestScores, bestScores1, bestScores2, bestScores3, bestScores4, bestScores5]
 
     def evaluate(self):
+        """Evaluate the population by calling each evaluation method for each chromosome.
+
+        Returns:
+            scores list[float]: The scores for each chromosome of the population.
+        """
         scores = [] 
         for chromosome in self.population:
             chromosome.evaluate()
@@ -373,6 +440,13 @@ class GA:
         return scores
 
     def selection(self):
+        """Obtains the new population based on the last population.
+        The roulette method consists on selecting the individuals based on the fitness score they have. 
+        The probability is the actual score of the chromosome / total score.
+
+        Returns:
+            scores list[float]: The scores for each chromosome of the population.
+        """
         newChromosomes = []
         epsilon = 0.00000000001
         if self.typeSelection == ROULETTE:
@@ -394,7 +468,11 @@ class GA:
         return newChromosomes
 
     def mutatePopulation(self):
-
+        """Mutate each chromosome (if chosen randomly) using the chromosome mutating method.
+        
+            Changes:
+                self.population
+        """
         childs = []
         for chromosome in self.population:
             if self.mutationProb >= random.randint(0,10)/10:
@@ -403,8 +481,15 @@ class GA:
                 childs += [chromosome]
         self.population = childs
 
-    # Cross chromosomes Function
     def crossPopulation(self, chrom1, chrom2):
+        """This function will cross the chromosomes by pairs to obtain new chromosomes. 
+            There are 2 types:
+            - k points crossover: Takes k random points of the chromosome and exchanges alternatively the chain of genes from one point to the following. 
+            - uniform crossover: Swaps each gene individually based on a probability of being swapped.
+        
+            Returns:
+                The 2 copies of the chomosome.
+        """
         child1, child2 = copy.deepcopy(chrom1), copy.deepcopy(chrom2)
         if self.typeCrossover == KPOINT:
             crosspointsChoices = list(range(len(chrom1.info)))
@@ -428,6 +513,8 @@ class GA:
         return child1, child2
 
     def loadChromoFile(self, bestGensSavePath, calendar, tasksDict, people, mutationProb):
+        """Loads the past population file and assign it to the population of the GA instance.
+        """
         with open(bestGensSavePath, "r") as f:
             lines = f.readlines()
         return [Chromosome(calendar, tasksDict, people, mutationProb ,[int(gene) for gene in line.strip("\n").split(",")[:-1]]) for line in lines]

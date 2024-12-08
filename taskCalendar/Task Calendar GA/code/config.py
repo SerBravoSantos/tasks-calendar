@@ -1,3 +1,6 @@
+"""Configuration file
+"""
+
 YEAR = 2024     # YEAR 
 MONTH = 12       # DIC 
    
@@ -66,6 +69,12 @@ alpha2 = 0.25
 alpha3 = 0.15
 alpha4 = 0.20
 alpha5 = 0.05
+
+# alpha1 = 0
+# alpha2 = 0
+# alpha3 = 0
+# alpha4 = 0
+# alpha5 = 1
 
 # CONFIGURATION FOR THE HYPER-PARAMETER SELECTION
 configsCrossoverTest = {
@@ -158,7 +167,7 @@ configFinal = { 'name': "configFinalCal2",
                                     "kpoints": 5, 
                                     "uniformCrossValue": 0.75, 
                                     "population": 200, 
-                                    "iterations": 10000,
+                                    "iterations": 100000,
                                     "cuts": [199]
                     },
                 }

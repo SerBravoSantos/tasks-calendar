@@ -1,4 +1,3 @@
-from operator import truediv
 import geneticAlgorithmTC as gaTC
 import numpy as np
 import calendar
@@ -9,6 +8,9 @@ import time
 import os
 import tensorflow as tf
 
+"""Main file, here the GA gets trained and we obtain the calendar, graphs and text files with the performances
+"""
+
 codePath = os.path.dirname(os.path.realpath(__file__))
 dirPath = os.path.abspath(os.path.join(codePath, os.pardir))
 
@@ -16,6 +18,13 @@ graphsPath = os.path.join(dirPath, "data/graphs")
 textPath = os.path.join(dirPath, "data/textFiles")
 
 def testConfiguration(filename, config, tasksWeek):
+    """test the configuration passed in the argument
+        In a test we will obtain the scores, and will print the task calendar that has being optimized
+    Args:
+        filename (str): name of the file we want to generate
+        config (dict[dict[str: Obj]]): configuration that we want to test (The configurations are defined in the config.py file)
+        tasksWeek (dict[int, list[int]]): Contains the planification of the tasks we need to make by week.
+    """
     bestScoresTests = []
     fit1Tests = []
     fit2Tests = []
@@ -50,11 +59,14 @@ def testConfiguration(filename, config, tasksWeek):
     with open(os.path.join(textPath, "execTime_{}_test{}.txt".format(filename, ntests)), "w+") as f:
         f.write("Execution Time: {}".format(end))
 
-if __name__ == "__main__":
 
+if __name__ == "__main__":
+    """Main definition
+        We want to initialize the variables needed, train the GA and show the results. 
+        You can also tests the different performances using the CPU or the GPU. 
+    """
     tasksWeek1 = {MONDAY: [TOB, CK], TUESDAY: [TIB],  WEDNESDAY: [CBB], THURSDAY:[CK], FRIDAY:[], SATURDAY:[], SUNDAY: [VS]}
-    tasksWeek2 = {MONDAY: [CTB], TUESDAY: [CTB],  WEDNESDAY: [CTB], THURSDAY:[CTB], FRIDAY:[CTB], SATURDAY:[CTB], SUNDAY: [CTB]}
-    
+    tasksWeek2 = {MONDAY: [CTB], TUESDAY: [CTB],  WEDNESDAY: [CTB], THURSDAY:[CTB], FRIDAY:[CTB], SATURDAY:[CTB], SUNDAY: [CTB]}    
     tasksWeek3 = {MONDAY: [TOB], TUESDAY: [TIB, CBB],  WEDNESDAY: [CBB], THURSDAY:[CK], FRIDAY:[CSB], SATURDAY:[], SUNDAY: [VS]}
     tasksList = [tasksWeek3]
     start = time.time()
@@ -62,7 +74,8 @@ if __name__ == "__main__":
     # with tf.device('/CPU:0'):
     #     for taskWeekCalendarNumber, tasksWeek in enumerate(tasksList):
     #         tasksLenght = sum([len(tasks) for tasks in list(tasksWeek.values())])
-    #         people = np.array(list(DAYSOFF.keys()))
+    #         people = np.array
+    # (list(DAYSOFF.keys()))
     #         peopleChosen = [ALBERTO, OSCAR, ANDRIU, ZARRA, BISWU, HATICE, EMMA, SERGIO]
     #         currentCalendar = calendar.monthcalendar(YEAR, MONTH)
     #         calendarStarts = getAddition(tasksWeek.items(), currentCalendar)

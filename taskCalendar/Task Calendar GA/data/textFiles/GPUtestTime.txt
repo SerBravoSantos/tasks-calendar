@@ -1,1 +1,1 @@
-time with GPU: 64.18944096565247
+time with GPU: 5136.265092611313

@@ -1,6 +1,16 @@
 from config import *
 
+""" The functions we need to interact with the calendar are found here
+"""
+
 def getDayOfTheWeek(day):
+    """ Returns a string of the day of the week passed
+    
+        Args:
+            day (int): Number that represents the day in the enumerate.
+        Returns:
+            string of the day asked.
+    """ 
     if day == MONDAY:
         return "MONDAY"
     elif day == TUESDAY:
@@ -19,6 +29,13 @@ def getDayOfTheWeek(day):
         return None
 
 def getTask(task):
+    """ Returns a string of the task asked.
+    
+        Args:
+            task (int): Number that represents the task in the enumerate.
+        Returns:
+            string of the task asked.
+    """ 
     if task == CBB:
         return "CBB"
     elif task == CSB:
@@ -37,6 +54,13 @@ def getTask(task):
         return "Not Name Assigned"
 
 def getWeek(week):
+    """ Returns a string of the week of the month passed
+    
+        Args:
+            week (int): Number that represents the week in the enumerate.
+        Returns:
+            string of the week asked.
+    """ 
     if week == WEEK1:
         return "WEEK 1"
     elif week == WEEK2:
@@ -53,6 +77,13 @@ def getWeek(week):
         return None
 
 def getPerson(person):
+    """ Returns a string of the person asked.
+    
+        Args:
+            person (int): Number that represents the person in the enumerate.
+        Returns:
+            string of the person asked.
+    """
     if person == ALBERTO:
         return "ALBERTO"
     elif person == OSCAR:
@@ -83,6 +114,18 @@ def getPerson(person):
         return None
 
 def printChromosome(calendarPath, chromosome, calendarStarts, currentCalendar, tasksLenght, tasksGeneral, year, month):
+    """ Writes in a file the structure of the calendar where all the people are already assigned by the chromosome passed.
+    
+        Args:
+            calendarPath (str): path where we will write the calendar.
+            chromosome (Chromosome): it maps the assignation of the people to the fixed tasks.
+            calendarStarts (int): index of the first day of the first week in the calendar.
+            currentCalendar (list[list[int]]): calendar we want to write. 
+            tasksLenght (int): number of tasks.
+            tasksGeneral (dict[str[list[int]]]): dictionary of the fixed tasks by day in a week.
+            year (int): Year of the calendar.
+            month (int): Month of the calendar. 
+    """
     calendarPrint = {}
     for i, gene in enumerate(chromosome):
         i += calendarStarts
@@ -115,17 +158,44 @@ def printChromosome(calendarPath, chromosome, calendarStarts, currentCalendar, t
         f.write(strCalendar)
 
 def getDayOfTheMonth(chromosome, i):
+    """Geths the day of the week and the week of the calendar evaluated having an index passed by argument.
+
+        Args:
+            chromosome (Chromosome): chromosome to evaluate
+            i (int): index
+
+        Returns:
+            week (int): week 
+            day (int): day 
+    """
     i = chromosome.dayStart + i
     day = i%chromosome.nTasks - 1
     week = int(i/chromosome.nTasks) 
     return week, day
 
 def getDayWeekAddition(currentCalendar):   
+    """Some calendars do not start on Monday, this days in the array that do not belong to the month are represented by zero. This function gets the addition for getting the first day.
+
+        Args:
+            currentCalendar (list[list[int]]): calendar we want to evaluate
+        Returns:
+            i (int): addition 
+    """
     for i, day in enumerate(currentCalendar[0]):
         if not day == 0:
             return i
 
 def getAddition(tasksGeneral, currentCalendar):
+    """As we can start on different days of the week, we need to get the offset of the tasks list we passed to know were we are pointing at. 
+        This function calculates the offset of the tasksGeneral.  
+        
+        Args:
+            tasksGeneral (dict[int, list[int]]): Dictionary of the tasks assigned to each day of the week
+            currentCalendar (list[list[int]]): calendar we want to evaluate
+        
+        Returns:
+            i (int): addition 
+    """
     day = getDayWeekAddition(currentCalendar)
     count = 0
     for dayWeek, tasks in tasksGeneral:
@@ -135,8 +205,19 @@ def getAddition(tasksGeneral, currentCalendar):
             count += 1
     return count
 
-# Returns a positive score if the person is not in holidays that day, and negative if the person is in holidays
+
 def evaluateFreeDays(chromosome, index, person, nGenes):
+    """returns a score that evaluates whether the person is assigned to fixed tasks that coincide with a day off for the same person in the schedule. 
+        
+        Args:
+            chromosome (Chromosome): chromosome to evaluate
+            index (index of the gene evaluated): _description_
+            person (int): number that corresponds to the person evaluated
+            nGenes (nGenes): size of the chromosome info
+
+        Returns:
+            float: possitive score if the day does not correspond to any day off and negative in the opposite way 
+    """
     if DAYSOFF[person]:
         if isTaskOnFreeDay(chromosome, index, person): # If the person not free
             return -1/nGenes
@@ -144,6 +225,16 @@ def evaluateFreeDays(chromosome, index, person, nGenes):
 
 # If the person assigned to the task is free that day will return true, false if not
 def isTaskOnFreeDay(chromosome, index, person):
+    """returns whether the day evaluated falls in the range of days of the days off
+        
+        Args:
+            chromosome (Chromosome): chromosome to evaluate
+            index (int): index of the gene evaluated
+            nGenes (int): size of the chromosome info
+
+        Returns:
+        Bool: True if the day does not correspond to any day off and False in the opposite way 
+    """
     week, day = getDayOfTheMonth(chromosome, index)
     if DAYSOFF[person]:
         for daysOff in DAYSOFF[person]:
@@ -158,6 +249,16 @@ def isTaskOnFreeDay(chromosome, index, person):
     return False
 
 def getTaskByIndex(chromosome, tasksGeneral, index):
+    """Returns the task based on the index of the chromosome
+        
+        Args:
+            chromosome (Chromosome): chromosome to evaluate
+            tasksGeneral (dict[int, list[int]]): Dictionary of the tasks assigned to each day of the week
+            index (int): index of the gene evaluated
+
+        Returns:
+            int: task
+    """
     index += getAddition(tasksGeneral.items(), chromosome.calendar)
     i = index%chromosome.nTasks
     
@@ -168,6 +269,16 @@ def getTaskByIndex(chromosome, tasksGeneral, index):
             i -= 1
 
 def getDayAndTask(tasksGeneral, index):
+    """Returns day of the week and the task based on the index. (In this function the index is calculated before)
+        
+        Args:
+            chromosome (Chromosome): chromosome to evaluate
+            tasksGeneral (dict[int, list[int]]): Dictionary of the tasks assigned to each day of the week
+            index (int): index of the gene evaluated
+
+        Returns:
+            int: task
+    """
     for dayWeek, tasks in tasksGeneral.items():
         for task in tasks:
             if index == 0:
